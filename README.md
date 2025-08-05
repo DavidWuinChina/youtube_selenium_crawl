@@ -279,27 +279,4 @@ SCRAPER_CONFIG["scroll_delay"] = 1  # 减少延迟
 scraper = YouTubeScraper(headless=True)
 ```
 
-## 🤝 贡献指南
-
-1. Fork 项目
-2. 创建功能分支
-3. 提交更改
-4. 推送到分支
-5. 创建 Pull Request
-
-## 📄 许可证
-
-本项目采用 MIT 许可证。
-
-## 🔄 版本历史
-
-- **v2.0.0**: 重构为服务层架构
-- **v1.0.0**: 初始版本
-
-## 📞 联系方式
-
-如有问题或建议，请提交 Issue 或 Pull Request。
-
----
-
 **注意**: 请遵守YouTube的服务条款和robots.txt文件。本工具仅用于学习和研究目的。 
