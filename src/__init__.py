@@ -2,7 +2,7 @@
 __version__ = "2.0.0"
 __author__ = "YouTube Crawler"
 
-from .scraper import YouTubeScraper
+from .service.scraper_service import YouTubeScraperService
 from .main import main
 
 # 导入服务层
@@ -10,7 +10,9 @@ from .service import (
     BrowserService,
     YouTubeService,
     DataService,
-    LoggingService
+    LoggingService,
+    YouTubeScraperService,
+    YouTubeUserService
 )
 
 # 导入配置层
@@ -27,14 +29,16 @@ from .config import (
 
 # 导入工具层
 from .utils import (
-    parsers,
-    extractors,
-    selectors
+    text_parsers,
+    element_extractors,
+    css_selectors,
+    file_utils
 )
 
 __all__ = [
     # 主要类
-    'YouTubeScraper',
+    'YouTubeScraperService',
+    'YouTubeUserService',
     'main',
     
     # 服务层
@@ -42,6 +46,8 @@ __all__ = [
     'YouTubeService',
     'DataService',
     'LoggingService',
+    'YouTubeScraperService',
+    'YouTubeUserService',
     
     # 配置层
     'BROWSER_CONFIG',
@@ -54,7 +60,8 @@ __all__ = [
     'ERROR_CONFIG',
     
     # 工具层
-    'parsers',
-    'extractors',
-    'selectors'
+    'text_parsers',
+    'element_extractors',
+    'css_selectors',
+    'file_utils'
 ] 

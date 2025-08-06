@@ -17,14 +17,14 @@ from ..config.settings import (
     OUTPUT_CONFIG,
     ERROR_CONFIG
 )
-from ..utils.extractors import (
+from ..utils.element_extractors import (
     extract_title,
     extract_channel_name,
     extract_view_count_and_date,
     extract_video_description,
     extract_video_links
 )
-from ..utils.selectors import PAGE_LOAD_SELECTORS
+from ..utils.css_selectors import PAGE_LOAD_SELECTORS
 
 
 class YouTubeService:

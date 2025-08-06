@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-from .selectors import *
-from .parsers import parse_view_count_and_date, parse_title_from_page_source, parse_description_from_page_source, clean_description
+from .css_selectors import *
+from .text_parsers import parse_view_count_and_date, parse_title_from_page_source, parse_description_from_page_source, clean_description
 
 
 def extract_title(driver):
@@ -173,16 +173,34 @@ def extract_video_links(driver, max_videos):
     for selector in VIDEO_ELEMENTS_SELECTORS:
         try:
             video_elements = driver.find_elements(By.CSS_SELECTOR, selector)
+            
             for element in video_elements[:max_videos]:
                 try:
+                    # 尝试多种链接选择器
                     for link_selector in VIDEO_LINK_SELECTORS:
-                        link_element = element.find_element(By.CSS_SELECTOR, link_selector)
-                        href = link_element.get_attribute("href")
-                        if href and "watch?v=" in href:
-                            video_links.append(href)
-                            break
-                except NoSuchElementException:
+                        try:
+                            link_elements = element.find_elements(By.CSS_SELECTOR, link_selector)
+                            for link_element in link_elements:
+                                href = link_element.get_attribute("href")
+                                if href and "watch?v=" in href:
+                                    # 避免重复链接
+                                    if href not in video_links:
+                                        video_links.append(href)
+                                        break
+                            if len(video_links) >= max_videos:
+                                break
+                        except Exception:
+                            continue
+                    
+                    if len(video_links) >= max_videos:
+                        break
+                        
+                except Exception:
                     continue
+                    
+            if len(video_links) >= max_videos:
+                break
+                
         except Exception:
             continue
     

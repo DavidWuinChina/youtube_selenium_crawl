@@ -45,12 +45,19 @@ SHOW_MORE_SELECTORS = [
 # 视频元素选择器
 VIDEO_ELEMENTS_SELECTORS = [
     "ytd-video-renderer",
-    "ytd-rich-item-renderer"
+    "ytd-rich-item-renderer",
+    "ytd-grid-video-renderer",
+    "ytd-video-card-renderer",
+    "ytd-rich-grid-media"
 ]
 
 # 视频链接选择器
 VIDEO_LINK_SELECTORS = [
-    "a#video-title"
+    "a#video-title",
+    "a#thumbnail",
+    "a[href*='watch?v=']",
+    "ytd-thumbnail a",
+    "a.yt-simple-endpoint"
 ]
 
 # 页面加载等待选择器

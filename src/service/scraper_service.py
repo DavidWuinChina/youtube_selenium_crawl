@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
 """
-YouTube爬虫类 - 使用服务层架构
+YouTube爬虫服务类 - 使用服务层架构
 """
 
-from .service.browser_service import BrowserService
-from .service.youtube_service import YouTubeService
-from .service.data_service import DataService
-from .service.logging_service import LoggingService
+from .browser_service import BrowserService
+from .youtube_service import YouTubeService
+from .data_service import DataService
+from .logging_service import LoggingService
 
 
-class YouTubeScraper:
-    """YouTube爬虫类 - 使用服务层架构"""
+class YouTubeScraperService:
+    """YouTube爬虫服务类 - 使用服务层架构"""
     
     def __init__(self, headless: bool = None):
         """
-        初始化爬虫
+        初始化爬虫服务
         
         Args:
             headless: 是否无头模式

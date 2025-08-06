@@ -1,36 +1,40 @@
 # -*- coding: utf-8 -*-
 """
-YouTube爬虫主入口 - 使用服务层架构
+YouTube用户帖子爬虫主入口 - 专门用于搜索特定用户的帖子
 """
 
-from .service.scraper_service import YouTubeScraperService
+from .service.user_service import YouTubeUserService
 
 
 def main():
-    """主函数"""
-    print("YouTube视频描述爬虫")
+    """用户搜索主函数"""
+    print("YouTube用户帖子爬虫")
     print("=" * 50)
     
     # 获取用户输入
-    search_query = input("请输入搜索关键词: ").strip()
-    if not search_query:
-        print("搜索关键词不能为空！")
+    username = input("请输入YouTube用户名 (例如: @username): ").strip()
+    if not username:
+        print("用户名不能为空！")
         return
+    
+    # 移除@符号（如果用户输入了的话）
+    if username.startswith('@'):
+        username = username[1:]
     
     try:
         max_videos = int(input("请输入要爬取的最大视频数量 (默认10): ") or "10")
     except ValueError:
         max_videos = 10
     
-    print(f"\n开始搜索: {search_query}")
+    print(f"\n开始搜索用户: {username}")
     print(f"最大爬取数量: {max_videos}")
     print("=" * 50)
     
     # 使用上下文管理器运行爬虫
     try:
-        with YouTubeScraperService(headless=False) as scraper:
+        with YouTubeUserService(headless=False) as scraper:
             # 运行完整的爬虫流程
-            saved_files = scraper.run(search_query, max_videos)
+            saved_files = scraper.run(username, max_videos)
             
             # 显示保存的文件
             if saved_files:
