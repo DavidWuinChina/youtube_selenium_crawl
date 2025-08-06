@@ -1,6 +1,6 @@
 # YouTube视频描述爬虫
 
-一个基于Selenium的YouTube视频信息爬虫，采用经典的企业级分层架构设计。
+一个基于Selenium的YouTube视频信息爬虫，采用经典分层架构设计。
 
 ## 🏗️ 项目架构
 
