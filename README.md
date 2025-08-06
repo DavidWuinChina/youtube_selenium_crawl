@@ -342,6 +342,7 @@ scraper = YouTubeScraperService(headless=True)
 user_scraper = YouTubeUserService(headless=True)
 ```
 
+<<<<<<< HEAD
 ## 🤝 贡献指南
 
 1. Fork 项目
@@ -367,3 +368,6 @@ user_scraper = YouTubeUserService(headless=True)
 ---
 
 **注意**: 请遵守YouTube的服务条款和robots.txt文件。本工具仅用于学习和研究目的。 
+=======
+**注意**: 请遵守YouTube的服务条款和robots.txt文件。本工具仅用于学习和研究目的。 
+>>>>>>> 0fb5a81f9426a6658e4b731305a72dbbd5b7c829
