@@ -162,4 +162,43 @@ def clean_description(description):
     if len(description) > 2000:
         description = description[:2000] + "..."
     
-    return description if description else "无描述" 
+    return description if description else "无描述"
+
+
+def is_video_older_than_24_hours(upload_date):
+    """
+    判断视频是否超过24小时
+    
+    Args:
+        upload_date: 上传日期字符串
+        
+    Returns:
+        bool: True表示超过24小时，False表示24小时内
+    """
+    if not upload_date or upload_date == "未知":
+        return True  # 无法判断时间的视频默认认为是老视频
+    
+    try:
+        # 处理相对时间格式
+        if "小时前" in upload_date or "hour" in upload_date.lower():
+            # 提取小时数
+            number_match = re.search(r'(\d+)', upload_date)
+            if number_match:
+                hours = int(number_match.group(1))
+                return hours >= 24  # 24小时及以上才算老视频
+            return True
+        
+        # 处理天、周、月、年的情况（都超过24小时）
+        if any(keyword in upload_date for keyword in ["天前", "周前", "月前", "年前", "day", "week", "month", "year"]):
+            return True
+        
+        # 处理绝对日期格式（都认为是老视频）
+        if any(keyword in upload_date for keyword in ["年", "月", "日", "/", "-"]):
+            return True
+        
+        # 默认情况下认为是老视频
+        return True
+        
+    except Exception as e:
+        print(f"判断视频时间时出错: {str(e)}")
+        return True  # 出错时默认认为是老视频 

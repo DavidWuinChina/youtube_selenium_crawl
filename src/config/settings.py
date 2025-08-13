@@ -14,11 +14,11 @@ OUTPUT_DIR = os.path.join(BASE_DIR, "data")
 
 # 浏览器配置
 BROWSER_CONFIG = {
-    "headless": False,  # 是否无头模式
+    "headless": True,  # 启用无头模式提高性能
     "window_size": "1920,1080",
     "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "implicit_wait": 20,  # 增加隐式等待时间
-    "page_load_timeout": 60,  # 大幅增加页面加载超时时间
+    "implicit_wait": 10,  # 减少隐式等待时间
+    "page_load_timeout": 30,  # 减少页面加载超时时间
     "chrome_options": [
         "--no-sandbox",
         "--disable-dev-shm-usage",
@@ -36,17 +36,29 @@ BROWSER_CONFIG = {
         "--disable-renderer-backgrounding",  # 禁用渲染器后台
         "--disable-features=TranslateUI",  # 禁用翻译UI
         "--disable-ipc-flooding-protection",  # 禁用IPC洪水保护
+        # 性能优化选项
+        "--disable-images",  # 禁用图片加载以提高速度
+        "--disable-notifications",  # 禁用通知
+        "--disable-popup-blocking",  # 禁用弹窗拦截
+        "--disable-default-apps",  # 禁用默认应用
+        "--disable-sync",  # 禁用同步
+        "--disable-background-networking",  # 禁用后台网络
+        "--aggressive-cache-discard",  # 积极缓存丢弃
+        "--memory-pressure-off",  # 关闭内存压力
+        "--max_old_space_size=4096",  # 增加内存限制
+        "--disable-logging",  # 禁用日志
+        "--disable-gpu-rasterization",  # 禁用GPU光栅化
     ]
 }
 
 # 爬虫配置
 SCRAPER_CONFIG = {
     "max_videos": 10,  # 默认最大视频数量
-    "scroll_count": 1,  # 减少滚动次数
-    "scroll_delay": 5,  # 增加滚动间隔（秒）
-    "page_load_delay": 8,  # 增加页面加载延迟（秒）
-    "retry_count": 2,  # 减少重试次数
-    "retry_delay": 3,  # 增加重试延迟（秒）
+    "scroll_count": 3,  # 增加滚动次数以获取更多视频
+    "scroll_delay": 2,  # 减少滚动间隔（秒）
+    "page_load_delay": 3,  # 大幅减少页面加载延迟（秒）
+    "retry_count": 2,  # 保持重试次数
+    "retry_delay": 2,  # 减少重试延迟（秒）
 }
 
 # YouTube URL配置
@@ -110,8 +122,8 @@ FILTER_CONFIG = {
 
 # 错误处理配置
 ERROR_CONFIG = {
-    "max_retries": 2,  # 减少重试次数
-    "retry_delay": 3,  # 增加重试延迟
+    "max_retries": 2,  # 保持重试次数
+    "retry_delay": 1,  # 减少重试延迟
     "continue_on_error": True,
     "log_errors": True,
 } 

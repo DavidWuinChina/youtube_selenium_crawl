@@ -8,6 +8,7 @@
 youtube_crawl/
 ├── user_channel_scraper.py    # 用户频道爬虫入口
 ├── fixed_scraper.py           # 通用搜索爬虫入口
+├── crypto_channels_scraper.py # 加密货币频道批量爬虫
 ├── src/                       # 源代码目录
 │   ├── __init__.py           # 包初始化文件
 │   ├── main.py               # 通用搜索主程序入口
@@ -21,6 +22,7 @@ youtube_crawl/
 │   │   ├── youtube_service.py     # YouTube业务逻辑
 │   │   ├── scraper_service.py     # 通用爬虫服务
 │   │   ├── user_service.py        # 用户频道服务
+│   │   ├── batch_service.py       # 批量处理服务
 │   │   ├── data_service.py        # 数据服务
 │   │   └── logging_service.py     # 日志服务
 │   └── utils/                # 工具层
@@ -45,15 +47,17 @@ youtube_crawl/
 - **工具层 (utils)**: 可复用的工具函数
 - **入口层**: 简洁的程序入口
 
-### 2. **双重爬取模式**
+### 2. **多重爬取模式**
 - **通用搜索模式**: 搜索任意关键词的YouTube视频
 - **用户频道模式**: 爬取特定用户频道的所有视频
+- **批量频道模式**: 批量爬取多个频道的最新视频
 
 ### 3. **服务层设计**
 - **BrowserService**: 浏览器管理
 - **YouTubeService**: YouTube业务逻辑
 - **ScraperService**: 通用爬虫服务
 - **UserService**: 用户频道服务
+- **BatchService**: 批量处理服务
 - **DataService**: 数据保存和加载
 - **LoggingService**: 日志管理
 
@@ -86,6 +90,13 @@ youtube_crawl/
 - ✅ 按最新时间顺序获取视频
 - ✅ 自动滚动加载更多视频
 - ✅ 批量处理视频信息
+
+### 批量频道功能
+- ✅ 批量爬取多个YouTube频道
+- ✅ 预设加密货币相关频道列表
+- ✅ 每个频道获取最新20条视频
+- ✅ 自动添加频道标识和时间戳
+- ✅ 统计报告和错误处理
 
 ### 系统功能
 - ✅ 完整的日志记录
@@ -120,6 +131,13 @@ python fixed_scraper.py
 ```bash
 # 运行用户频道爬虫
 python user_channel_scraper.py
+```
+
+#### 3. 批量频道模式
+
+```bash
+# 运行加密货币频道批量爬虫
+python crypto_channels_scraper.py
 ```
 
 ### 程序化使用
@@ -158,6 +176,41 @@ saved_files = scraper.save_results(videos, "investanswersclips")
 scraper.stop()
 ```
 
+#### 批量频道爬取
+
+```python
+# 方式1: 使用预设的加密货币频道列表
+from src.service import URLBatchService
+
+# 预定义的加密货币频道URL
+crypto_channels = [
+    "https://youtube.com/@moon_star512?si=s9sMMU9GNzFK56Qo",
+    "https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo",
+    "https://youtube.com/@cryptograde?si=d_GHk4WzwcHuy51k",
+    "https://youtube.com/@asma_crypto",
+    "https://youtube.com/@bitbloomcrypto",
+    "https://www.youtube.com/@drcrypto2"
+]
+
+# 使用URL批处理服务
+from src.service import URLBatchService
+
+with URLBatchService(headless=False) as batch_service:
+    saved_files = batch_service.run_batch_process(
+        channel_urls=crypto_channels,
+        max_videos_per_channel=20,
+        filename_prefix="crypto_channels"
+    )
+
+# 方式2: 自定义频道URL列表
+custom_channel_urls = [
+    "https://youtube.com/@your_channel1", 
+    "https://youtube.com/@your_channel2"
+]
+with URLBatchService(headless=False) as batch_service:
+    videos = batch_service.process_multiple_urls(custom_channel_urls, 15)
+```
+
 ## 📁 输出文件
 
 程序会在 `data/` 目录下生成以下文件：
@@ -170,6 +223,10 @@ scraper.stop()
 - `user_{用户名}_videos.csv` - CSV格式的用户视频数据
 - `user_{用户名}_videos.json` - JSON格式的用户视频数据
 
+### 批量频道
+- `crypto_channels_{时间戳}_videos.csv` - CSV格式的批量数据
+- `crypto_channels_{时间戳}_videos.json` - JSON格式的批量数据
+
 ### 数据格式
 
 ```json
@@ -179,7 +236,9 @@ scraper.stop()
   "view_count": "观看次数",
   "date": "上传日期",
   "description": "视频描述",
-  "url": "视频链接"
+  "url": "视频链接",
+  "source_channel": "源频道名称",
+  "scrape_timestamp": "爬取时间戳"
 }
 ```
 

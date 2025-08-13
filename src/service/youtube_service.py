@@ -166,21 +166,21 @@ class YouTubeService:
         return video_info
     
     def _wait_for_page_load(self):
-        """等待页面加载完成 - 使用更宽松的策略"""
+        """等待页面加载完成 - 优化性能"""
         try:
-            # 首先等待页面基本加载
-            time.sleep(3)
+            # 减少基本等待时间
+            time.sleep(1)
             
-            # 尝试等待标题元素，但不强制要求
+            # 尝试等待标题元素，缩短等待时间
             try:
-                WebDriverWait(self.driver, 10).until(
+                WebDriverWait(self.driver, 5).until(
                     EC.presence_of_element_located(("css selector", "h1"))
                 )
             except TimeoutException:
                 self.logger.warning("页面标题加载超时，继续处理...")
             
-            # 再等待一段时间确保页面稳定
-            time.sleep(2)
+            # 减少稳定等待时间
+            time.sleep(1)
             
         except Exception as e:
             self.logger.warning(f"页面加载等待时出错: {str(e)}")

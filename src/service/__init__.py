@@ -6,6 +6,8 @@ from .data_service import DataService
 from .logging_service import LoggingService
 from .scraper_service import YouTubeScraperService
 from .user_service import YouTubeUserService
+# from .batch_service import BatchProcessingService  # 未实现
+from .url_batch_service import URLBatchService
 
 __all__ = [
     'BrowserService',
@@ -13,5 +15,7 @@ __all__ = [
     'DataService',
     'LoggingService',
     'YouTubeScraperService',
-    'YouTubeUserService'
+    'YouTubeUserService',
+    # 'BatchProcessingService',  # 未实现
+    'URLBatchService'
 ] 
