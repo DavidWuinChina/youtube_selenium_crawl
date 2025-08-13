@@ -17,8 +17,8 @@ BROWSER_CONFIG = {
     "headless": True,  # 启用无头模式提高性能
     "window_size": "1920,1080",
     "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "implicit_wait": 10,  # 减少隐式等待时间
-    "page_load_timeout": 30,  # 减少页面加载超时时间
+    "implicit_wait": 6,  # 减少隐式等待时间
+    "page_load_timeout": 15,  # 减少页面加载超时时间
     "chrome_options": [
         "--no-sandbox",
         "--disable-dev-shm-usage",
@@ -51,14 +51,14 @@ BROWSER_CONFIG = {
     ]
 }
 
-# 爬虫配置
+# 爬虫配置 - 优化性能，减少延迟
 SCRAPER_CONFIG = {
     "max_videos": 10,  # 默认最大视频数量
-    "scroll_count": 3,  # 增加滚动次数以获取更多视频
-    "scroll_delay": 2,  # 减少滚动间隔（秒）
-    "page_load_delay": 3,  # 大幅减少页面加载延迟（秒）
-    "retry_count": 2,  # 保持重试次数
-    "retry_delay": 2,  # 减少重试延迟（秒）
+    "scroll_count": 3,  # 保持滚动次数
+    "scroll_delay": 1,  # 减少滚动间隔到1秒
+    "page_load_delay": 1,  # 大幅减少页面加载延迟到1秒
+    "retry_count": 1,  # 减少重试次数到1次
+    "retry_delay": 1,  # 减少重试延迟到1秒
 }
 
 # YouTube URL配置
@@ -120,10 +120,10 @@ FILTER_CONFIG = {
     "min_title_length": 1,
 }
 
-# 错误处理配置
+# 错误处理配置 - 优化性能
 ERROR_CONFIG = {
-    "max_retries": 2,  # 保持重试次数
-    "retry_delay": 1,  # 减少重试延迟
+    "max_retries": 1,  # 减少重试次数到1次
+    "retry_delay": 1,  # 减少重试延迟到0.5秒
     "continue_on_error": True,
     "log_errors": True,
 } 

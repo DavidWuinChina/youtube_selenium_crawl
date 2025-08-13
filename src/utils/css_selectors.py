@@ -32,14 +32,21 @@ DESCRIPTION_SELECTORS = [
     "ytd-expandable-video-description-body-renderer yt-formatted-string",
     "ytd-video-secondary-info-renderer yt-formatted-string",
     "#description yt-formatted-string",
-    "ytd-video-description-renderer yt-formatted-string"
+    "ytd-video-description-renderer yt-formatted-string",
+    # 新版 YouTube Watch 页面描述容器
+    "#description-inline-expander",
+    "#description-inline-expander yt-formatted-string",
+    "ytd-text-inline-expander#description-inline-expander yt-formatted-string"
 ]
 
 # 显示更多按钮选择器
 SHOW_MORE_SELECTORS = [
     "tp-yt-paper-button#expand",
     "button#expand",
-    "ytd-button-renderer#expand"
+    "ytd-button-renderer#expand",
+    # 新版描述区域的展开按钮
+    "#description-inline-expander #expand",
+    "ytd-text-inline-expander#description-inline-expander #expand"
 ]
 
 # 视频元素选择器

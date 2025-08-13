@@ -1,4 +1,46 @@
 import re
+import datetime
+
+
+def parse_youtube_first_line(first_line_text):
+    """专门解析YouTube标准格式的第一行，如: '16,278 views Jul 31, 2025'"""
+    try:
+        print(f"解析YouTube第一行: {first_line_text}")
+        
+        view_count = "未知"
+        upload_date = "未知"
+        
+        # 使用更精确的正则表达式来匹配YouTube标准格式
+        # 匹配格式: "16,278 views Jul 31, 2025" 或 "16,278 views Jul 31"
+        youtube_pattern = r'([\d,]+)\s+views?\s+([A-Za-z]+\s+\d{1,2}(?:,\s+\d{4})?)'
+        match = re.search(youtube_pattern, first_line_text, re.IGNORECASE)
+        
+        if match:
+            view_count = match.group(1)
+            date_part = match.group(2)
+            print(f"YouTube格式匹配成功: views={view_count}, date={date_part}")
+            
+            # 处理日期部分
+            if date_part:
+                # 如果日期包含年份，直接使用
+                if re.search(r'\d{4}', date_part):
+                    upload_date = date_part
+                else:
+                    # 如果没有年份，尝试添加当前年份
+                    current_year = datetime.datetime.now().year
+                    upload_date = f"{date_part}, {current_year}"
+                
+                print(f"处理后的日期: {upload_date}")
+        else:
+            print("YouTube标准格式匹配失败，尝试其他方法...")
+            # 如果YouTube标准格式匹配失败，回退到通用方法
+            view_count, upload_date = parse_view_count_and_date(first_line_text)
+        
+        return view_count, upload_date
+        
+    except Exception as e:
+        print(f"解析YouTube第一行时出错: {str(e)}")
+        return "未知", "未知"
 
 
 def parse_view_count_and_date(text):
@@ -12,13 +54,22 @@ def parse_view_count_and_date(text):
             r'([\d,]+)\s*(?:views?|观看|次观看)',
             r'([\d,]+)\s*(?:views?)',
             r'([\d,]+)\s*(?:观看)',
-            r'([\d,]+)\s*(?:次观看)'
+            r'([\d,]+)\s*(?:次观看)',
+            # 新增更多模式
+            r'([\d,]+)\s*(?:views?|观看|次观看|次)',
+            r'([\d,]+)\s*(?:views?|观看|次观看|次)\s*•',  # 包含分隔符
+            r'([\d,]+)\s*(?:views?|观看|次观看|次)\s*·',  # 包含分隔符
+            r'([\d,]+)\s*(?:views?|观看|次观看|次)\s*\|',  # 包含分隔符
+            # 针对YouTube标准格式的模式
+            r'([\d,]+)\s*views?\s+[A-Za-z]+\s+\d{1,2},\s+\d{4}',  # 如: "16,278 views Jul 31, 2025"
+            r'([\d,]+)\s*views?\s+[A-Za-z]+\s+\d{1,2}',  # 如: "16,278 views Jul 31"
         ]
         
         for pattern in view_patterns:
             view_match = re.search(pattern, text, re.IGNORECASE)
             if view_match:
                 view_count = view_match.group(1)
+                print(f"匹配到观看次数模式: {pattern} -> {view_count}")
                 break
         
         # 提取日期 - 支持多种格式
@@ -29,15 +80,27 @@ def parse_view_count_and_date(text):
             r'(\d+\s+(?:hours?|days?|weeks?|months?)\s+ago)',  # 英文相对时间
             r'(\d+\s*(?:小时前|天前|周前|月前))',  # 中文相对时间
             r'(\d{1,2}/\d{1,2}/\d{4})',  # 数字日期格式
+            # 新增更多模式
+            r'(\d{1,2}/\d{1,2}/\d{4})',  # 数字日期格式
+            r'(\d{1,2}-\d{1,2}-\d{4})',  # 连字符日期格式
+            r'(\d{4}-\d{1,2}-\d{1,2})',  # ISO日期格式
+            r'(\d+\s+(?:hours?|days?|weeks?|months?|years?)\s+ago)',  # 英文相对时间（包含年）
+            r'(\d+\s*(?:小时前|天前|周前|月前|年前))',  # 中文相对时间（包含年）
+            # 针对YouTube标准格式的模式
+            r'([A-Za-z]+\s+\d{1,2},\s+\d{4})',  # 如: "Jul 31, 2025"
+            r'([A-Za-z]+\s+\d{1,2})',  # 如: "Jul 31"
+            r'(\d{1,2}\s+[A-Za-z]+\s+\d{4})',  # 如: "31 Jul 2025"
         ]
         
         for pattern in date_patterns:
             date_match = re.search(pattern, text, re.IGNORECASE)
             if date_match:
                 date_str = date_match.group(1)
+                print(f"匹配到日期模式: {pattern} -> {date_str}")
                 # 处理相对时间
                 if "ago" in date_str.lower() or "前" in date_str:
                     upload_date = convert_relative_date(date_str)
+                    print(f"转换为相对时间: {date_str} -> {upload_date}")
                 else:
                     upload_date = date_str
                 break
