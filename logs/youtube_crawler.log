@@ -6493,3 +6493,918 @@ Stacktrace:
 2025-08-13 17:40:52,064 - src.service.logging_service - INFO - YouTube爬虫服务关闭
 2025-08-13 17:40:52,064 - src.service.logging_service - INFO - ============================================================
 2025-08-13 17:40:52,064 - src.service.url_batch_service - INFO - URL批量处理服务已停止
+2025-08-14 11:04:06,645 - src.service.logging_service - INFO - ============================================================
+2025-08-14 11:04:06,647 - src.service.logging_service - INFO - YouTube爬虫服务启动
+2025-08-14 11:04:06,647 - src.service.logging_service - INFO - ============================================================
+2025-08-14 11:04:06,647 - src.service.browser_service - INFO - 创建Chrome浏览器驱动 (headless: False)
+2025-08-14 11:04:06,647 - WDM - INFO - ====== WebDriver manager ======
+2025-08-14 11:04:08,938 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 11:04:09,767 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 11:04:10,358 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 11:04:11,733 - WDM - INFO - WebDriver version 126.0.6478.182 selected
+2025-08-14 11:04:11,738 - WDM - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/126.0.6478.182/win32/chromedriver-win32.zip
+2025-08-14 11:04:11,738 - WDM - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/126.0.6478.182/win32/chromedriver-win32.zip
+2025-08-14 11:04:12,432 - WDM - INFO - Driver downloading response is 200
+2025-08-14 11:04:14,000 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 11:04:14,858 - WDM - INFO - Driver has been saved in cache [C:\Users\David Wu\.wdm\drivers\chromedriver\win64\126.0.6478.182]
+2025-08-14 11:04:20,629 - src.service.browser_service - INFO - Chrome浏览器驱动创建成功
+2025-08-14 11:04:20,630 - src.service.url_batch_service - INFO - URL批量处理服务启动成功
+2025-08-14 11:04:20,630 - src.service.url_batch_service - INFO - 开始批量处理 1 个频道URL
+2025-08-14 11:04:20,631 - src.service.url_batch_service - INFO - 正在处理第 1/1 个频道: COINMARKETHUB
+2025-08-14 11:04:20,631 - src.service.url_batch_service - INFO - 开始处理频道: COINMARKETHUB - https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo
+2025-08-14 11:04:20,632 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@COINMARKETHUB/about?si=WjLsW0RahAyaE6Wo
+2025-08-14 11:05:22,686 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@COINMARKETHUB/videos?si=WjLsW0RahAyaE6Wo
+2025-08-14 11:05:22,686 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo
+2025-08-14 11:05:27,913 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 11:05:43,176 - src.service.url_batch_service - INFO - 从频道 COINMARKETHUB 获取到 1 个视频链接
+2025-08-14 11:05:43,176 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 1 个视频: https://www.youtube.com/watch?v=h7xL6-zxYQE
+2025-08-14 11:05:43,176 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=h7xL6-zxYQE
+2025-08-14 11:06:14,881 - src.service.youtube_service - INFO - 成功获取视频信息: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH...
+2025-08-14 11:06:14,881 - src.service.url_batch_service - INFO - 成功获取视频信息: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH...
+2025-08-14 11:06:14,882 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH... (发布时间: 2025年7月31日)
+2025-08-14 11:06:14,882 - src.service.url_batch_service - INFO - 频道 COINMARKETHUB 处理完成:
+2025-08-14 11:06:14,882 - src.service.url_batch_service - INFO -   总视频数: 1 个
+2025-08-14 11:06:14,882 - src.service.url_batch_service - INFO -   24小时前视频: 1 个 (计入指定数量)
+2025-08-14 11:06:14,883 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 11:06:14,883 - src.service.url_batch_service - INFO - 频道 COINMARKETHUB: 获取 1 个视频 (24小时前: 1个, 24小时内: 0个)
+2025-08-14 11:06:14,883 - src.service.url_batch_service - INFO - ============================================================
+2025-08-14 11:06:14,884 - src.service.url_batch_service - INFO - URL批量处理完成！
+2025-08-14 11:06:14,884 - src.service.url_batch_service - INFO - 总耗时: 0:01:54.252497
+2025-08-14 11:06:14,884 - src.service.url_batch_service - INFO - 成功处理频道: 1/1
+2025-08-14 11:06:14,885 - src.service.url_batch_service - INFO - 总共获取视频: 1 个
+2025-08-14 11:06:14,885 - src.service.url_batch_service - INFO -   - 24小时前视频: 1 个 (计入指定数量)
+2025-08-14 11:06:14,885 - src.service.url_batch_service - INFO -   - 24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 11:06:14,908 - src.service.data_service - INFO - 已保存CSV文件: c:\Users\David Wu\Desktop\web3intern\web3_intern2\youtube_crawl\data\crypto_channels_20250814_110614_videos.csv
+2025-08-14 11:06:14,911 - src.service.data_service - INFO - 已保存JSON文件: c:\Users\David Wu\Desktop\web3intern\web3_intern2\youtube_crawl\data\crypto_channels_20250814_110614_videos.json
+2025-08-14 11:06:14,912 - src.service.data_service - INFO - 成功保存 1 个视频到 2 个文件
+2025-08-14 11:06:14,913 - src.service.url_batch_service - INFO - 保存了 1 个视频信息
+2025-08-14 11:06:14,914 - src.service.url_batch_service - INFO -   - 24小时前视频: 1 个
+2025-08-14 11:06:14,915 - src.service.url_batch_service - INFO -   - 24小时内视频: 0 个
+2025-08-14 11:06:14,916 - src.service.url_batch_service - INFO - 按频道统计:
+2025-08-14 11:06:14,916 - src.service.url_batch_service - INFO -   COINMARKETHUB: 1 个视频 (24h前: 1, 24h内: 0)
+2025-08-14 11:06:19,701 - src.service.browser_service - INFO - 浏览器驱动已关闭
+2025-08-14 11:06:19,701 - src.service.logging_service - INFO - ============================================================
+2025-08-14 11:06:19,701 - src.service.logging_service - INFO - YouTube爬虫服务关闭
+2025-08-14 11:06:19,701 - src.service.logging_service - INFO - ============================================================
+2025-08-14 11:06:19,701 - src.service.url_batch_service - INFO - URL批量处理服务已停止
+2025-08-14 12:51:38,745 - src.service.logging_service - INFO - ============================================================
+2025-08-14 12:51:38,746 - src.service.logging_service - INFO - YouTube爬虫服务启动
+2025-08-14 12:51:38,747 - src.service.logging_service - INFO - ============================================================
+2025-08-14 12:51:38,747 - src.service.browser_service - INFO - 创建Chrome浏览器驱动 (headless: False)
+2025-08-14 12:51:38,747 - WDM - INFO - ====== WebDriver manager ======
+2025-08-14 12:51:40,261 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 12:51:41,179 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 12:51:41,641 - WDM - INFO - Driver [C:\Users\David Wu\.wdm\drivers\chromedriver\win64\126.0.6478.182\chromedriver-win32/chromedriver.exe] found in cache
+2025-08-14 12:51:47,020 - src.service.browser_service - INFO - Chrome浏览器驱动创建成功
+2025-08-14 12:51:47,020 - src.service.url_batch_service - INFO - URL批量处理服务启动成功
+2025-08-14 12:51:47,020 - src.service.url_batch_service - INFO - 开始批量处理 1 个频道URL
+2025-08-14 12:51:47,020 - src.service.url_batch_service - INFO - 正在处理第 1/1 个频道: COINMARKETHUB
+2025-08-14 12:51:47,020 - src.service.url_batch_service - INFO - 开始处理频道: COINMARKETHUB - https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo
+2025-08-14 12:51:47,022 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@COINMARKETHUB/about?si=WjLsW0RahAyaE6Wo
+2025-08-14 12:53:30,296 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@COINMARKETHUB/videos?si=WjLsW0RahAyaE6Wo
+2025-08-14 12:53:30,296 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo
+2025-08-14 12:53:33,308 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 12:53:48,462 - src.service.url_batch_service - INFO - 从频道 COINMARKETHUB 获取到 1 个视频链接
+2025-08-14 12:53:48,462 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 1 个视频: https://www.youtube.com/watch?v=h7xL6-zxYQE&pp=0gcJCa0JAYcqIYzv
+2025-08-14 12:53:48,463 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=h7xL6-zxYQE&pp=0gcJCa0JAYcqIYzv
+2025-08-14 12:54:18,606 - src.service.youtube_service - INFO - 成功获取视频信息: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH...
+2025-08-14 12:54:18,606 - src.service.url_batch_service - INFO - 成功获取视频信息: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH...
+2025-08-14 12:54:18,607 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH... (发布时间: 2025年7月31日)
+2025-08-14 12:54:18,607 - src.service.url_batch_service - INFO - 频道 COINMARKETHUB 处理完成:
+2025-08-14 12:54:18,607 - src.service.url_batch_service - INFO -   总视频数: 1 个
+2025-08-14 12:54:18,608 - src.service.url_batch_service - INFO -   24小时前视频: 1 个 (计入指定数量)
+2025-08-14 12:54:18,608 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 12:54:18,608 - src.service.url_batch_service - INFO - 频道 COINMARKETHUB: 获取 1 个视频 (24小时前: 1个, 24小时内: 0个)
+2025-08-14 12:54:18,608 - src.service.url_batch_service - INFO - ============================================================
+2025-08-14 12:54:18,609 - src.service.url_batch_service - INFO - URL批量处理完成！
+2025-08-14 12:54:18,609 - src.service.url_batch_service - INFO - 总耗时: 0:02:31.587379
+2025-08-14 12:54:18,609 - src.service.url_batch_service - INFO - 成功处理频道: 1/1
+2025-08-14 12:54:18,610 - src.service.url_batch_service - INFO - 总共获取视频: 1 个
+2025-08-14 12:54:18,610 - src.service.url_batch_service - INFO -   - 24小时前视频: 1 个 (计入指定数量)
+2025-08-14 12:54:18,610 - src.service.url_batch_service - INFO -   - 24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 12:54:18,636 - src.service.data_service - INFO - 已保存CSV文件: c:\Users\David Wu\Desktop\web3intern\web3_intern2\youtube_crawl\data\crypto_channels_20250814_125418_videos.csv
+2025-08-14 12:54:18,638 - src.service.data_service - INFO - 已保存JSON文件: c:\Users\David Wu\Desktop\web3intern\web3_intern2\youtube_crawl\data\crypto_channels_20250814_125418_videos.json
+2025-08-14 12:54:18,641 - src.service.data_service - INFO - 成功保存 1 个视频到 2 个文件
+2025-08-14 12:54:18,642 - src.service.url_batch_service - INFO - 保存了 1 个视频信息
+2025-08-14 12:54:18,644 - src.service.url_batch_service - INFO -   - 24小时前视频: 1 个
+2025-08-14 12:54:18,644 - src.service.url_batch_service - INFO -   - 24小时内视频: 0 个
+2025-08-14 12:54:18,646 - src.service.url_batch_service - INFO - 按频道统计:
+2025-08-14 12:54:18,647 - src.service.url_batch_service - INFO -   COINMARKETHUB: 1 个视频 (24h前: 1, 24h内: 0)
+2025-08-14 12:54:23,366 - src.service.browser_service - INFO - 浏览器驱动已关闭
+2025-08-14 12:54:23,366 - src.service.logging_service - INFO - ============================================================
+2025-08-14 12:54:23,366 - src.service.logging_service - INFO - YouTube爬虫服务关闭
+2025-08-14 12:54:23,366 - src.service.logging_service - INFO - ============================================================
+2025-08-14 12:54:23,366 - src.service.url_batch_service - INFO - URL批量处理服务已停止
+2025-08-14 13:03:50,828 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:03:50,829 - src.service.logging_service - INFO - YouTube爬虫服务启动
+2025-08-14 13:03:50,830 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:03:50,830 - src.service.browser_service - INFO - 创建Chrome浏览器驱动 (headless: False)
+2025-08-14 13:03:50,830 - WDM - INFO - ====== WebDriver manager ======
+2025-08-14 13:03:52,189 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 13:03:52,888 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 13:03:53,457 - WDM - INFO - Driver [C:\Users\David Wu\.wdm\drivers\chromedriver\win64\126.0.6478.182\chromedriver-win32/chromedriver.exe] found in cache
+2025-08-14 13:03:58,438 - src.service.browser_service - INFO - Chrome浏览器驱动创建成功
+2025-08-14 13:03:58,439 - src.service.url_batch_service - INFO - URL批量处理服务启动成功
+2025-08-14 13:03:58,439 - src.service.url_batch_service - INFO - 开始批量处理 1 个频道URL
+2025-08-14 13:03:58,439 - src.service.url_batch_service - INFO - 正在处理第 1/1 个频道: COINMARKETHUB
+2025-08-14 13:03:58,439 - src.service.url_batch_service - INFO - 开始处理频道: COINMARKETHUB - https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:03:58,439 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@COINMARKETHUB/about?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:05:47,008 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@COINMARKETHUB/videos?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:05:47,009 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:05:49,296 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 13:06:04,479 - src.service.url_batch_service - INFO - 从频道 COINMARKETHUB 获取到 1 个视频链接
+2025-08-14 13:06:04,479 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 1 个视频: https://www.youtube.com/watch?v=h7xL6-zxYQE
+2025-08-14 13:06:04,480 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=h7xL6-zxYQE
+2025-08-14 13:06:35,641 - src.service.youtube_service - INFO - 成功获取视频信息: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH...
+2025-08-14 13:06:35,642 - src.service.url_batch_service - INFO - 成功获取视频信息: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH...
+2025-08-14 13:06:35,642 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH... (发布时间: 2025年7月31日)
+2025-08-14 13:06:35,642 - src.service.url_batch_service - INFO - 频道 COINMARKETHUB 处理完成:
+2025-08-14 13:06:35,642 - src.service.url_batch_service - INFO -   总视频数: 1 个
+2025-08-14 13:06:35,643 - src.service.url_batch_service - INFO -   24小时前视频: 1 个 (计入指定数量)
+2025-08-14 13:06:35,643 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 13:06:35,643 - src.service.url_batch_service - INFO - 频道 COINMARKETHUB: 获取 1 个视频 (24小时前: 1个, 24小时内: 0个)
+2025-08-14 13:06:35,643 - src.service.url_batch_service - INFO - ============================================================
+2025-08-14 13:06:35,643 - src.service.url_batch_service - INFO - URL批量处理完成！
+2025-08-14 13:06:35,644 - src.service.url_batch_service - INFO - 总耗时: 0:02:37.203417
+2025-08-14 13:06:35,644 - src.service.url_batch_service - INFO - 成功处理频道: 1/1
+2025-08-14 13:06:35,644 - src.service.url_batch_service - INFO - 总共获取视频: 1 个
+2025-08-14 13:06:35,644 - src.service.url_batch_service - INFO -   - 24小时前视频: 1 个 (计入指定数量)
+2025-08-14 13:06:35,644 - src.service.url_batch_service - INFO -   - 24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 13:06:35,656 - src.service.data_service - INFO - 已保存CSV文件: c:\Users\David Wu\Desktop\web3intern\web3_intern2\youtube_crawl\data\crypto_channels_20250814_130635_videos.csv
+2025-08-14 13:06:35,657 - src.service.data_service - INFO - 已保存JSON文件: c:\Users\David Wu\Desktop\web3intern\web3_intern2\youtube_crawl\data\crypto_channels_20250814_130635_videos.json
+2025-08-14 13:06:35,658 - src.service.data_service - INFO - 成功保存 1 个视频到 2 个文件
+2025-08-14 13:06:35,658 - src.service.url_batch_service - INFO - 保存了 1 个视频信息
+2025-08-14 13:06:35,658 - src.service.url_batch_service - INFO -   - 24小时前视频: 1 个
+2025-08-14 13:06:35,658 - src.service.url_batch_service - INFO -   - 24小时内视频: 0 个
+2025-08-14 13:06:35,659 - src.service.url_batch_service - INFO - 按频道统计:
+2025-08-14 13:06:35,659 - src.service.url_batch_service - INFO -   COINMARKETHUB: 1 个视频 (24h前: 1, 24h内: 0)
+2025-08-14 13:06:40,022 - src.service.browser_service - INFO - 浏览器驱动已关闭
+2025-08-14 13:06:40,022 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:06:40,022 - src.service.logging_service - INFO - YouTube爬虫服务关闭
+2025-08-14 13:06:40,023 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:06:40,023 - src.service.url_batch_service - INFO - URL批量处理服务已停止
+2025-08-14 13:26:11,502 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:26:11,502 - src.service.logging_service - INFO - YouTube爬虫服务启动
+2025-08-14 13:26:11,503 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:26:11,503 - src.service.browser_service - INFO - 创建Chrome浏览器驱动 (headless: False)
+2025-08-14 13:26:11,503 - WDM - INFO - ====== WebDriver manager ======
+2025-08-14 13:26:12,776 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 13:26:13,353 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 13:26:13,916 - WDM - INFO - Driver [C:\Users\David Wu\.wdm\drivers\chromedriver\win64\126.0.6478.182\chromedriver-win32/chromedriver.exe] found in cache
+2025-08-14 13:26:18,816 - src.service.browser_service - INFO - Chrome浏览器驱动创建成功
+2025-08-14 13:26:18,816 - src.service.url_batch_service - INFO - URL批量处理服务启动成功
+2025-08-14 13:26:18,816 - src.service.url_batch_service - INFO - 开始批量处理 1 个频道URL
+2025-08-14 13:26:18,817 - src.service.url_batch_service - INFO - 正在处理第 1/1 个频道: COINMARKETHUB
+2025-08-14 13:26:18,817 - src.service.url_batch_service - INFO - 开始处理频道: COINMARKETHUB - https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:26:18,817 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@COINMARKETHUB/about?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:28:06,467 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@COINMARKETHUB/videos?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:28:06,468 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:28:09,261 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 13:28:24,420 - src.service.url_batch_service - INFO - 从频道 COINMARKETHUB 获取到 1 个视频链接
+2025-08-14 13:28:24,420 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 1 个视频: https://www.youtube.com/watch?v=h7xL6-zxYQE
+2025-08-14 13:28:24,420 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=h7xL6-zxYQE
+2025-08-14 13:28:54,811 - src.service.youtube_service - INFO - 成功获取视频信息: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH...
+2025-08-14 13:28:54,812 - src.service.url_batch_service - INFO - 成功获取视频信息: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH...
+2025-08-14 13:28:54,841 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH... (发布时间: 2025年7月31日)
+2025-08-14 13:28:54,841 - src.service.url_batch_service - INFO - 频道 COINMARKETHUB 处理完成:
+2025-08-14 13:28:54,842 - src.service.url_batch_service - INFO -   总视频数: 1 个
+2025-08-14 13:28:54,842 - src.service.url_batch_service - INFO -   24小时前视频: 1 个 (计入指定数量)
+2025-08-14 13:28:54,842 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 13:28:54,842 - src.service.url_batch_service - INFO - 频道 COINMARKETHUB: 获取 1 个视频 (24小时前: 1个, 24小时内: 0个)
+2025-08-14 13:28:54,843 - src.service.url_batch_service - INFO - ============================================================
+2025-08-14 13:28:54,843 - src.service.url_batch_service - INFO - URL批量处理完成！
+2025-08-14 13:28:54,844 - src.service.url_batch_service - INFO - 总耗时: 0:02:36.025762
+2025-08-14 13:28:54,844 - src.service.url_batch_service - INFO - 成功处理频道: 1/1
+2025-08-14 13:28:54,844 - src.service.url_batch_service - INFO - 总共获取视频: 1 个
+2025-08-14 13:28:54,844 - src.service.url_batch_service - INFO -   - 24小时前视频: 1 个 (计入指定数量)
+2025-08-14 13:28:54,844 - src.service.url_batch_service - INFO -   - 24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 13:28:54,852 - src.service.data_service - INFO - 已保存CSV文件: c:\Users\David Wu\Desktop\web3intern\web3_intern2\youtube_crawl\data\crypto_channels_20250814_132854_videos.csv
+2025-08-14 13:28:54,854 - src.service.data_service - INFO - 已保存JSON文件: c:\Users\David Wu\Desktop\web3intern\web3_intern2\youtube_crawl\data\crypto_channels_20250814_132854_videos.json
+2025-08-14 13:28:54,856 - src.service.data_service - INFO - 成功保存 1 个视频到 2 个文件
+2025-08-14 13:28:54,857 - src.service.url_batch_service - INFO - 保存了 1 个视频信息
+2025-08-14 13:28:54,857 - src.service.url_batch_service - INFO -   - 24小时前视频: 1 个
+2025-08-14 13:28:54,857 - src.service.url_batch_service - INFO -   - 24小时内视频: 0 个
+2025-08-14 13:28:54,857 - src.service.url_batch_service - INFO - 按频道统计:
+2025-08-14 13:28:54,858 - src.service.url_batch_service - INFO -   COINMARKETHUB: 1 个视频 (24h前: 1, 24h内: 0)
+2025-08-14 13:28:59,149 - src.service.browser_service - INFO - 浏览器驱动已关闭
+2025-08-14 13:28:59,149 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:28:59,149 - src.service.logging_service - INFO - YouTube爬虫服务关闭
+2025-08-14 13:28:59,149 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:28:59,149 - src.service.url_batch_service - INFO - URL批量处理服务已停止
+2025-08-14 13:43:22,688 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:43:22,689 - src.service.logging_service - INFO - YouTube爬虫服务启动
+2025-08-14 13:43:22,689 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:43:22,690 - src.service.browser_service - INFO - 创建Chrome浏览器驱动 (headless: False)
+2025-08-14 13:43:22,690 - WDM - INFO - ====== WebDriver manager ======
+2025-08-14 13:43:23,959 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 13:43:24,535 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 13:43:25,110 - WDM - INFO - Driver [C:\Users\David Wu\.wdm\drivers\chromedriver\win64\126.0.6478.182\chromedriver-win32/chromedriver.exe] found in cache
+2025-08-14 13:43:29,930 - src.service.browser_service - INFO - Chrome浏览器驱动创建成功
+2025-08-14 13:43:29,930 - src.service.url_batch_service - INFO - URL批量处理服务启动成功
+2025-08-14 13:43:29,930 - src.service.url_batch_service - INFO - 开始批量处理 1 个频道URL
+2025-08-14 13:43:29,931 - src.service.url_batch_service - INFO - 正在处理第 1/1 个频道: COINMARKETHUB
+2025-08-14 13:43:29,931 - src.service.url_batch_service - INFO - 开始处理频道: COINMARKETHUB - https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:43:29,932 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@COINMARKETHUB/about?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:45:17,675 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@COINMARKETHUB/videos?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:45:17,675 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:45:20,511 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 13:45:35,659 - src.service.url_batch_service - INFO - 从频道 COINMARKETHUB 获取到 1 个视频链接
+2025-08-14 13:45:35,660 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 1 个视频: https://www.youtube.com/watch?v=h7xL6-zxYQE
+2025-08-14 13:45:35,660 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=h7xL6-zxYQE
+2025-08-14 13:46:05,465 - src.service.youtube_service - INFO - 成功获取视频信息: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH...
+2025-08-14 13:46:05,465 - src.service.url_batch_service - INFO - 成功获取视频信息: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH...
+2025-08-14 13:46:05,486 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH... (发布时间: 2025年7月31日)
+2025-08-14 13:46:05,486 - src.service.url_batch_service - INFO - 频道 COINMARKETHUB 处理完成:
+2025-08-14 13:46:05,486 - src.service.url_batch_service - INFO -   总视频数: 1 个
+2025-08-14 13:46:05,486 - src.service.url_batch_service - INFO -   24小时前视频: 1 个 (计入指定数量)
+2025-08-14 13:46:05,487 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 13:46:05,487 - src.service.url_batch_service - INFO - 频道 COINMARKETHUB: 获取 1 个视频 (24小时前: 1个, 24小时内: 0个)
+2025-08-14 13:46:05,487 - src.service.url_batch_service - INFO - ============================================================
+2025-08-14 13:46:05,488 - src.service.url_batch_service - INFO - URL批量处理完成！
+2025-08-14 13:46:05,488 - src.service.url_batch_service - INFO - 总耗时: 0:02:35.556197
+2025-08-14 13:46:05,488 - src.service.url_batch_service - INFO - 成功处理频道: 1/1
+2025-08-14 13:46:05,488 - src.service.url_batch_service - INFO - 总共获取视频: 1 个
+2025-08-14 13:46:05,488 - src.service.url_batch_service - INFO -   - 24小时前视频: 1 个 (计入指定数量)
+2025-08-14 13:46:05,488 - src.service.url_batch_service - INFO -   - 24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 13:46:05,493 - src.service.data_service - INFO - 已保存CSV文件: c:\Users\David Wu\Desktop\web3intern\web3_intern2\youtube_crawl\data\crypto_channels_20250814_134605_videos.csv
+2025-08-14 13:46:05,494 - src.service.data_service - INFO - 已保存JSON文件: c:\Users\David Wu\Desktop\web3intern\web3_intern2\youtube_crawl\data\crypto_channels_20250814_134605_videos.json
+2025-08-14 13:46:05,495 - src.service.data_service - INFO - 成功保存 1 个视频到 2 个文件
+2025-08-14 13:46:05,495 - src.service.url_batch_service - INFO - 保存了 1 个视频信息
+2025-08-14 13:46:05,496 - src.service.url_batch_service - INFO -   - 24小时前视频: 1 个
+2025-08-14 13:46:05,496 - src.service.url_batch_service - INFO -   - 24小时内视频: 0 个
+2025-08-14 13:46:05,496 - src.service.url_batch_service - INFO - 按频道统计:
+2025-08-14 13:46:05,496 - src.service.url_batch_service - INFO -   COINMARKETHUB: 1 个视频 (24h前: 1, 24h内: 0)
+2025-08-14 13:46:09,592 - src.service.browser_service - INFO - 浏览器驱动已关闭
+2025-08-14 13:46:09,592 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:46:09,592 - src.service.logging_service - INFO - YouTube爬虫服务关闭
+2025-08-14 13:46:09,593 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:46:09,593 - src.service.url_batch_service - INFO - URL批量处理服务已停止
+2025-08-14 13:52:58,938 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:52:58,938 - src.service.logging_service - INFO - YouTube爬虫服务启动
+2025-08-14 13:52:58,938 - src.service.logging_service - INFO - ============================================================
+2025-08-14 13:52:58,938 - src.service.browser_service - INFO - 创建Chrome浏览器驱动 (headless: False)
+2025-08-14 13:52:58,939 - WDM - INFO - ====== WebDriver manager ======
+2025-08-14 13:53:00,304 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 13:53:00,952 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-14 13:53:01,541 - WDM - INFO - Driver [C:\Users\David Wu\.wdm\drivers\chromedriver\win64\126.0.6478.182\chromedriver-win32/chromedriver.exe] found in cache
+2025-08-14 13:53:06,082 - src.service.browser_service - INFO - Chrome浏览器驱动创建成功
+2025-08-14 13:53:06,083 - src.service.url_batch_service - INFO - URL批量处理服务启动成功
+2025-08-14 13:53:06,083 - src.service.url_batch_service - INFO - 开始批量处理 10 个频道URL
+2025-08-14 13:53:06,084 - src.service.url_batch_service - INFO - 正在处理第 1/10 个频道: COINMARKETHUB
+2025-08-14 13:53:06,084 - src.service.url_batch_service - INFO - 开始处理频道: COINMARKETHUB - https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:53:06,084 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@COINMARKETHUB/about?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:54:53,629 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@COINMARKETHUB/videos?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:54:53,630 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo
+2025-08-14 13:54:56,904 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 13:56:07,310 - src.service.url_batch_service - INFO - 从频道 COINMARKETHUB 获取到 10 个视频链接
+2025-08-14 13:56:07,311 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 1 个视频: https://www.youtube.com/watch?v=h7xL6-zxYQE
+2025-08-14 13:56:07,311 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=h7xL6-zxYQE
+2025-08-14 13:56:37,024 - src.service.youtube_service - INFO - 成功获取视频信息: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH...
+2025-08-14 13:56:37,024 - src.service.url_batch_service - INFO - 成功获取视频信息: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH...
+2025-08-14 13:56:37,047 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: BLOCKDAG PRESALE IS LIVE & THE NEXT FUTURE GEM 💎TH... (发布时间: 2025年7月31日)
+2025-08-14 13:56:37,047 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 2 个视频: https://www.youtube.com/watch?v=hvLew8ikM7Q
+2025-08-14 13:56:37,047 - src.service.youtube_service - INFO - 正在处理第 2 个视频: https://www.youtube.com/watch?v=hvLew8ikM7Q
+2025-08-14 13:57:06,713 - src.service.youtube_service - INFO - 成功获取视频信息: SQUID GAME MEME MINI TELEGRAM APP REVIEW | WATCH I...
+2025-08-14 13:57:06,713 - src.service.url_batch_service - INFO - 成功获取视频信息: SQUID GAME MEME MINI TELEGRAM APP REVIEW | WATCH I...
+2025-08-14 13:57:06,759 - src.service.url_batch_service - INFO - ✓ 有效视频 #2: SQUID GAME MEME MINI TELEGRAM APP REVIEW | WATCH I... (发布时间: 2025年7月4日)
+2025-08-14 13:57:06,760 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 3 个视频: https://www.youtube.com/watch?v=ncZyAsZQDyU&pp=0gcJCa0JAYcqIYzv
+2025-08-14 13:57:06,760 - src.service.youtube_service - INFO - 正在处理第 3 个视频: https://www.youtube.com/watch?v=ncZyAsZQDyU&pp=0gcJCa0JAYcqIYzv
+2025-08-14 13:57:36,902 - src.service.youtube_service - INFO - 成功获取视频信息: Vault-X (VAX) Walkthrough | DApp Overview, Whitepa...
+2025-08-14 13:57:36,902 - src.service.url_batch_service - INFO - 成功获取视频信息: Vault-X (VAX) Walkthrough | DApp Overview, Whitepa...
+2025-08-14 13:57:36,927 - src.service.url_batch_service - INFO - ✓ 有效视频 #3: Vault-X (VAX) Walkthrough | DApp Overview, Whitepa... (发布时间: 2025年6月24日)
+2025-08-14 13:57:36,927 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 4 个视频: https://www.youtube.com/watch?v=JoXToj6mnBs
+2025-08-14 13:57:36,927 - src.service.youtube_service - INFO - 正在处理第 4 个视频: https://www.youtube.com/watch?v=JoXToj6mnBs
+2025-08-14 13:58:06,537 - src.service.youtube_service - INFO - 成功获取视频信息: Happy Balloon Dog (HBD) | Meme + Interactive Game ...
+2025-08-14 13:58:06,537 - src.service.url_batch_service - INFO - 成功获取视频信息: Happy Balloon Dog (HBD) | Meme + Interactive Game ...
+2025-08-14 13:58:06,559 - src.service.url_batch_service - INFO - ✓ 有效视频 #4: Happy Balloon Dog (HBD) | Meme + Interactive Game ... (发布时间: 2025年6月21日)
+2025-08-14 13:58:06,559 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 5 个视频: https://www.youtube.com/watch?v=Iw5ahtfwNEk
+2025-08-14 13:58:06,560 - src.service.youtube_service - INFO - 正在处理第 5 个视频: https://www.youtube.com/watch?v=Iw5ahtfwNEk
+2025-08-14 13:58:36,357 - src.service.youtube_service - INFO - 成功获取视频信息: UNCHAINX LAUNCHER NEW TOKEN | BUY UNX TOKEN NEXT 1...
+2025-08-14 13:58:36,357 - src.service.url_batch_service - INFO - 成功获取视频信息: UNCHAINX LAUNCHER NEW TOKEN | BUY UNX TOKEN NEXT 1...
+2025-08-14 13:58:36,384 - src.service.url_batch_service - INFO - ✓ 有效视频 #5: UNCHAINX LAUNCHER NEW TOKEN | BUY UNX TOKEN NEXT 1... (发布时间: 2025年5月30日)
+2025-08-14 13:58:36,384 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 6 个视频: https://www.youtube.com/watch?v=vRLR_D-SJK8
+2025-08-14 13:58:36,386 - src.service.youtube_service - INFO - 正在处理第 6 个视频: https://www.youtube.com/watch?v=vRLR_D-SJK8
+2025-08-14 13:59:06,345 - src.service.youtube_service - INFO - 成功获取视频信息: Unlock Smarter AI-Powered Crypto Insights with Sma...
+2025-08-14 13:59:06,345 - src.service.url_batch_service - INFO - 成功获取视频信息: Unlock Smarter AI-Powered Crypto Insights with Sma...
+2025-08-14 13:59:06,369 - src.service.url_batch_service - INFO - ✓ 有效视频 #6: Unlock Smarter AI-Powered Crypto Insights with Sma... (发布时间: 2025年5月25日)
+2025-08-14 13:59:06,369 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 7 个视频: https://www.youtube.com/watch?v=8TdumjXC6k8
+2025-08-14 13:59:06,370 - src.service.youtube_service - INFO - 正在处理第 7 个视频: https://www.youtube.com/watch?v=8TdumjXC6k8
+2025-08-14 13:59:36,372 - src.service.youtube_service - INFO - 成功获取视频信息: New Platform Creator X | Buy Tokens Earn rewards |...
+2025-08-14 13:59:36,372 - src.service.url_batch_service - INFO - 成功获取视频信息: New Platform Creator X | Buy Tokens Earn rewards |...
+2025-08-14 13:59:36,392 - src.service.url_batch_service - INFO - ✓ 有效视频 #7: New Platform Creator X | Buy Tokens Earn rewards |... (发布时间: 2025年5月20日)
+2025-08-14 13:59:36,392 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 8 个视频: https://www.youtube.com/watch?v=S-tQGC1CA_U
+2025-08-14 13:59:36,392 - src.service.youtube_service - INFO - 正在处理第 8 个视频: https://www.youtube.com/watch?v=S-tQGC1CA_U
+2025-08-14 14:00:06,189 - src.service.youtube_service - INFO - 成功获取视频信息: "🚀💥 Discover Extsy: The Future of Crypto Trading 💳...
+2025-08-14 14:00:06,189 - src.service.url_batch_service - INFO - 成功获取视频信息: "🚀💥 Discover Extsy: The Future of Crypto Trading 💳...
+2025-08-14 14:00:06,213 - src.service.url_batch_service - INFO - ✓ 有效视频 #8: "🚀💥 Discover Extsy: The Future of Crypto Trading 💳... (发布时间: 2025年5月20日)
+2025-08-14 14:00:06,213 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 9 个视频: https://www.youtube.com/watch?v=m1S-ezelAtM
+2025-08-14 14:00:06,214 - src.service.youtube_service - INFO - 正在处理第 9 个视频: https://www.youtube.com/watch?v=m1S-ezelAtM
+2025-08-14 14:00:36,672 - src.service.youtube_service - INFO - 成功获取视频信息: 🎈 $HBD Now Live on MEXC – Dive Into the World of H...
+2025-08-14 14:00:36,672 - src.service.url_batch_service - INFO - 成功获取视频信息: 🎈 $HBD Now Live on MEXC – Dive Into the World of H...
+2025-08-14 14:00:36,690 - src.service.url_batch_service - INFO - ✓ 有效视频 #9: 🎈 $HBD Now Live on MEXC – Dive Into the World of H... (发布时间: 2025年5月15日)
+2025-08-14 14:00:36,690 - src.service.url_batch_service - INFO - 处理频道 COINMARKETHUB 第 10 个视频: https://www.youtube.com/watch?v=852CycPs3yw
+2025-08-14 14:00:36,691 - src.service.youtube_service - INFO - 正在处理第 10 个视频: https://www.youtube.com/watch?v=852CycPs3yw
+2025-08-14 14:01:06,727 - src.service.youtube_service - INFO - 成功获取视频信息: HOW TO MAKE MONEY WITH GCOIN ON PLAYGAGA...
+2025-08-14 14:01:06,727 - src.service.url_batch_service - INFO - 成功获取视频信息: HOW TO MAKE MONEY WITH GCOIN ON PLAYGAGA...
+2025-08-14 14:01:06,784 - src.service.url_batch_service - INFO - ✓ 有效视频 #10: HOW TO MAKE MONEY WITH GCOIN ON PLAYGAGA... (发布时间: 2025年4月28日)
+2025-08-14 14:01:06,784 - src.service.url_batch_service - INFO - 频道 COINMARKETHUB 处理完成:
+2025-08-14 14:01:06,785 - src.service.url_batch_service - INFO -   总视频数: 10 个
+2025-08-14 14:01:06,785 - src.service.url_batch_service - INFO -   24小时前视频: 10 个 (计入指定数量)
+2025-08-14 14:01:06,785 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 14:01:06,785 - src.service.url_batch_service - INFO - 频道 COINMARKETHUB: 获取 10 个视频 (24小时前: 10个, 24小时内: 0个)
+2025-08-14 14:01:06,785 - src.service.url_batch_service - INFO - 等待 2 秒后继续下一个频道...
+2025-08-14 14:01:08,787 - src.service.url_batch_service - INFO - 正在处理第 2/10 个频道: hamzatechofficial55
+2025-08-14 14:01:08,787 - src.service.url_batch_service - INFO - 开始处理频道: hamzatechofficial55 - https://youtube.com/@hamzatechofficial55?si=S5T5NXXfG8T5_ZUZ
+2025-08-14 14:01:08,788 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@hamzatechofficial55/about?si=S5T5NXXfG8T5_ZUZ
+2025-08-14 14:02:54,612 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@hamzatechofficial55/videos?si=S5T5NXXfG8T5_ZUZ
+2025-08-14 14:02:54,613 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@hamzatechofficial55?si=S5T5NXXfG8T5_ZUZ
+2025-08-14 14:02:57,133 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 14:04:07,487 - src.service.url_batch_service - INFO - 从频道 hamzatechofficial55 获取到 10 个视频链接
+2025-08-14 14:04:07,488 - src.service.url_batch_service - INFO - 处理频道 hamzatechofficial55 第 1 个视频: https://www.youtube.com/watch?v=2EhZ72dRgeQ
+2025-08-14 14:04:07,488 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=2EhZ72dRgeQ
+2025-08-14 14:04:38,646 - src.service.youtube_service - INFO - 成功获取视频信息: DEFI TOKEN REVIEW 🔥 DONALD TRUMP BUYING 🚀 BIG POTE...
+2025-08-14 14:04:38,646 - src.service.url_batch_service - INFO - 成功获取视频信息: DEFI TOKEN REVIEW 🔥 DONALD TRUMP BUYING 🚀 BIG POTE...
+2025-08-14 14:04:38,669 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: DEFI TOKEN REVIEW 🔥 DONALD TRUMP BUYING 🚀 BIG POTE... (发布时间: 2025年3月20日)
+2025-08-14 14:04:38,669 - src.service.url_batch_service - INFO - 处理频道 hamzatechofficial55 第 2 个视频: https://www.youtube.com/watch?v=NBMB0tnO6xc
+2025-08-14 14:04:38,669 - src.service.youtube_service - INFO - 正在处理第 2 个视频: https://www.youtube.com/watch?v=NBMB0tnO6xc
+2025-08-14 14:05:08,536 - src.service.youtube_service - INFO - 成功获取视频信息: MEXC X ETHENA 🔥 HOLD USDE TO EARN 10% DAILY 💯 BIG ...
+2025-08-14 14:05:08,537 - src.service.url_batch_service - INFO - 成功获取视频信息: MEXC X ETHENA 🔥 HOLD USDE TO EARN 10% DAILY 💯 BIG ...
+2025-08-14 14:05:08,588 - src.service.url_batch_service - INFO - ✓ 有效视频 #2: MEXC X ETHENA 🔥 HOLD USDE TO EARN 10% DAILY 💯 BIG ... (发布时间: 2025年3月17日)
+2025-08-14 14:05:08,589 - src.service.url_batch_service - INFO - 处理频道 hamzatechofficial55 第 3 个视频: https://www.youtube.com/watch?v=sVPNUT9gH8s
+2025-08-14 14:05:08,589 - src.service.youtube_service - INFO - 正在处理第 3 个视频: https://www.youtube.com/watch?v=sVPNUT9gH8s
+2025-08-14 14:05:38,438 - src.service.youtube_service - INFO - 成功获取视频信息: STAU TOKEN PROJECT REVIEW 💰 UPTO THE MOON 🔥 JOIN N...
+2025-08-14 14:05:38,439 - src.service.url_batch_service - INFO - 成功获取视频信息: STAU TOKEN PROJECT REVIEW 💰 UPTO THE MOON 🔥 JOIN N...
+2025-08-14 14:05:38,460 - src.service.url_batch_service - INFO - ✓ 有效视频 #3: STAU TOKEN PROJECT REVIEW 💰 UPTO THE MOON 🔥 JOIN N... (发布时间: 2025年1月25日)
+2025-08-14 14:05:38,461 - src.service.url_batch_service - INFO - 处理频道 hamzatechofficial55 第 4 个视频: https://www.youtube.com/watch?v=tEckrvb3kEY
+2025-08-14 14:05:38,461 - src.service.youtube_service - INFO - 正在处理第 4 个视频: https://www.youtube.com/watch?v=tEckrvb3kEY
+2025-08-14 14:06:08,168 - src.service.youtube_service - INFO - 成功获取视频信息: Bitget Meme Coin Listings || Get 1000X Profit - Tr...
+2025-08-14 14:06:08,168 - src.service.url_batch_service - INFO - 成功获取视频信息: Bitget Meme Coin Listings || Get 1000X Profit - Tr...
+2025-08-14 14:06:08,189 - src.service.url_batch_service - INFO - ✓ 有效视频 #4: Bitget Meme Coin Listings || Get 1000X Profit - Tr... (发布时间: 2024年11月15日)
+2025-08-14 14:06:08,190 - src.service.url_batch_service - INFO - 处理频道 hamzatechofficial55 第 5 个视频: https://www.youtube.com/watch?v=6LTfJwTRnIY
+2025-08-14 14:06:08,190 - src.service.youtube_service - INFO - 正在处理第 5 个视频: https://www.youtube.com/watch?v=6LTfJwTRnIY
+2025-08-14 14:06:38,102 - src.service.youtube_service - INFO - 成功获取视频信息: BEST USDT PLATFORM REVIEW || MORE THAN 100X PROFIT...
+2025-08-14 14:06:38,102 - src.service.url_batch_service - INFO - 成功获取视频信息: BEST USDT PLATFORM REVIEW || MORE THAN 100X PROFIT...
+2025-08-14 14:06:38,122 - src.service.url_batch_service - INFO - ✓ 有效视频 #5: BEST USDT PLATFORM REVIEW || MORE THAN 100X PROFIT... (发布时间: 2024年9月21日)
+2025-08-14 14:06:38,123 - src.service.url_batch_service - INFO - 处理频道 hamzatechofficial55 第 6 个视频: https://www.youtube.com/watch?v=Mn2Ko9Cyzis
+2025-08-14 14:06:38,123 - src.service.youtube_service - INFO - 正在处理第 6 个视频: https://www.youtube.com/watch?v=Mn2Ko9Cyzis
+2025-08-14 14:07:08,027 - src.service.youtube_service - INFO - 成功获取视频信息: NOMOEX Exchange || 2nd Sept Listing on MEXC Exchan...
+2025-08-14 14:07:08,028 - src.service.url_batch_service - INFO - 成功获取视频信息: NOMOEX Exchange || 2nd Sept Listing on MEXC Exchan...
+2025-08-14 14:07:08,083 - src.service.url_batch_service - INFO - ✓ 有效视频 #6: NOMOEX Exchange || 2nd Sept Listing on MEXC Exchan... (发布时间: 2024年9月1日)
+2025-08-14 14:07:08,083 - src.service.url_batch_service - INFO - 处理频道 hamzatechofficial55 第 7 个视频: https://www.youtube.com/watch?v=t-OxxXLThxo
+2025-08-14 14:07:08,083 - src.service.youtube_service - INFO - 正在处理第 7 个视频: https://www.youtube.com/watch?v=t-OxxXLThxo
+2025-08-14 14:07:37,842 - src.service.youtube_service - INFO - 成功获取视频信息: BEST CRYPTO NODEA || BUY NOW || SCALABLE DeFi ON B...
+2025-08-14 14:07:37,843 - src.service.url_batch_service - INFO - 成功获取视频信息: BEST CRYPTO NODEA || BUY NOW || SCALABLE DeFi ON B...
+2025-08-14 14:07:37,868 - src.service.url_batch_service - INFO - ✓ 有效视频 #7: BEST CRYPTO NODEA || BUY NOW || SCALABLE DeFi ON B... (发布时间: 2024年8月28日)
+2025-08-14 14:07:37,868 - src.service.url_batch_service - INFO - 处理频道 hamzatechofficial55 第 8 个视频: https://www.youtube.com/watch?v=kMI2tVAMNxU
+2025-08-14 14:07:37,868 - src.service.youtube_service - INFO - 正在处理第 8 个视频: https://www.youtube.com/watch?v=kMI2tVAMNxU
+2025-08-14 14:08:07,925 - src.service.youtube_service - INFO - 成功获取视频信息: Goinbus Full Review Video || Buy Product like Netf...
+2025-08-14 14:08:07,926 - src.service.url_batch_service - INFO - 成功获取视频信息: Goinbus Full Review Video || Buy Product like Netf...
+2025-08-14 14:08:07,979 - src.service.url_batch_service - INFO - ✓ 有效视频 #8: Goinbus Full Review Video || Buy Product like Netf... (发布时间: 2024年7月7日)
+2025-08-14 14:08:07,979 - src.service.url_batch_service - INFO - 处理频道 hamzatechofficial55 第 9 个视频: https://www.youtube.com/watch?v=1q-Xhnn2fJ8
+2025-08-14 14:08:07,980 - src.service.youtube_service - INFO - 正在处理第 9 个视频: https://www.youtube.com/watch?v=1q-Xhnn2fJ8
+2025-08-14 14:08:38,022 - src.service.youtube_service - INFO - 成功获取视频信息: KcPay App 💯 $970 Big airdrop || 1000x Coin || $KCP...
+2025-08-14 14:08:38,022 - src.service.url_batch_service - INFO - 成功获取视频信息: KcPay App 💯 $970 Big airdrop || 1000x Coin || $KCP...
+2025-08-14 14:08:38,074 - src.service.url_batch_service - INFO - ✓ 有效视频 #9: KcPay App 💯 $970 Big airdrop || 1000x Coin || $KCP... (发布时间: 2024年6月20日)
+2025-08-14 14:08:38,076 - src.service.url_batch_service - INFO - 处理频道 hamzatechofficial55 第 10 个视频: https://www.youtube.com/watch?v=XxI5jla7Haw
+2025-08-14 14:08:38,076 - src.service.youtube_service - INFO - 正在处理第 10 个视频: https://www.youtube.com/watch?v=XxI5jla7Haw
+2025-08-14 14:14:22,448 - src.service.youtube_service - INFO - 成功获取视频信息: LOTTO INU TOKEN PROJECT REVIEW || 100X POTENTIAL |...
+2025-08-14 14:14:22,449 - src.service.url_batch_service - INFO - 成功获取视频信息: LOTTO INU TOKEN PROJECT REVIEW || 100X POTENTIAL |...
+2025-08-14 14:14:22,823 - src.service.url_batch_service - INFO - ✓ 有效视频 #10: LOTTO INU TOKEN PROJECT REVIEW || 100X POTENTIAL |... (发布时间: 2024年4月27日)
+2025-08-14 14:14:22,824 - src.service.url_batch_service - INFO - 频道 hamzatechofficial55 处理完成:
+2025-08-14 14:14:22,824 - src.service.url_batch_service - INFO -   总视频数: 10 个
+2025-08-14 14:14:22,824 - src.service.url_batch_service - INFO -   24小时前视频: 10 个 (计入指定数量)
+2025-08-14 14:14:22,825 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 14:14:22,825 - src.service.url_batch_service - INFO - 频道 hamzatechofficial55: 获取 10 个视频 (24小时前: 10个, 24小时内: 0个)
+2025-08-14 14:14:22,825 - src.service.url_batch_service - INFO - 等待 2 秒后继续下一个频道...
+2025-08-14 14:14:24,826 - src.service.url_batch_service - INFO - 正在处理第 3/10 个频道: cryptograde
+2025-08-14 14:14:24,826 - src.service.url_batch_service - INFO - 开始处理频道: cryptograde - https://youtube.com/@cryptograde?si=d_GHk4WzwcHuy51k
+2025-08-14 14:14:24,827 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@cryptograde/about?si=d_GHk4WzwcHuy51k
+2025-08-14 14:16:17,251 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@cryptograde/videos?si=d_GHk4WzwcHuy51k
+2025-08-14 14:16:17,251 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@cryptograde?si=d_GHk4WzwcHuy51k
+2025-08-14 14:16:20,229 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 14:17:30,585 - src.service.url_batch_service - INFO - 从频道 cryptograde 获取到 10 个视频链接
+2025-08-14 14:17:30,585 - src.service.url_batch_service - INFO - 处理频道 cryptograde 第 1 个视频: https://www.youtube.com/watch?v=Fbhcatdqt7A
+2025-08-14 14:17:30,585 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=Fbhcatdqt7A
+2025-08-14 14:18:00,370 - src.service.youtube_service - INFO - 成功获取视频信息: Coinflow is a next-generation Web3 lending platfor...
+2025-08-14 14:18:00,371 - src.service.url_batch_service - INFO - 成功获取视频信息: Coinflow is a next-generation Web3 lending platfor...
+2025-08-14 14:18:00,390 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: Coinflow is a next-generation Web3 lending platfor... (发布时间: 2025年8月13日)
+2025-08-14 14:18:00,391 - src.service.url_batch_service - INFO - 处理频道 cryptograde 第 2 个视频: https://www.youtube.com/watch?v=RgwJs_XI5qM
+2025-08-14 14:18:00,391 - src.service.youtube_service - INFO - 正在处理第 2 个视频: https://www.youtube.com/watch?v=RgwJs_XI5qM
+2025-08-14 14:18:30,126 - src.service.youtube_service - INFO - 成功获取视频信息: Coinflow Global Launch🌏Decentralized Lending Platf...
+2025-08-14 14:18:30,126 - src.service.url_batch_service - INFO - 成功获取视频信息: Coinflow Global Launch🌏Decentralized Lending Platf...
+2025-08-14 14:18:30,145 - src.service.url_batch_service - INFO - ✓ 有效视频 #2: Coinflow Global Launch🌏Decentralized Lending Platf... (发布时间: 2025年8月2日)
+2025-08-14 14:18:30,146 - src.service.url_batch_service - INFO - 处理频道 cryptograde 第 3 个视频: https://www.youtube.com/watch?v=-QXgvZUtRQQ
+2025-08-14 14:18:30,146 - src.service.youtube_service - INFO - 正在处理第 3 个视频: https://www.youtube.com/watch?v=-QXgvZUtRQQ
+2025-08-14 14:18:59,874 - src.service.youtube_service - INFO - 成功获取视频信息: 💥SELFMADE BILLIONARE EVENT WITH 10X BAGGER INFLUEN...
+2025-08-14 14:18:59,874 - src.service.url_batch_service - INFO - 成功获取视频信息: 💥SELFMADE BILLIONARE EVENT WITH 10X BAGGER INFLUEN...
+2025-08-14 14:18:59,891 - src.service.url_batch_service - INFO - ✓ 有效视频 #3: 💥SELFMADE BILLIONARE EVENT WITH 10X BAGGER INFLUEN... (发布时间: 2025年6月10日)
+2025-08-14 14:18:59,891 - src.service.url_batch_service - INFO - 处理频道 cryptograde 第 4 个视频: https://www.youtube.com/watch?v=C0uRRxgIF3A
+2025-08-14 14:18:59,891 - src.service.youtube_service - INFO - 正在处理第 4 个视频: https://www.youtube.com/watch?v=C0uRRxgIF3A
+2025-08-14 14:19:29,637 - src.service.youtube_service - INFO - 成功获取视频信息: PUFF VERSE FULL OF DREMLAND | PLAY & ENJOY GAME NO...
+2025-08-14 14:19:29,637 - src.service.url_batch_service - INFO - 成功获取视频信息: PUFF VERSE FULL OF DREMLAND | PLAY & ENJOY GAME NO...
+2025-08-14 14:19:29,660 - src.service.url_batch_service - INFO - ✓ 有效视频 #4: PUFF VERSE FULL OF DREMLAND | PLAY & ENJOY GAME NO... (发布时间: 2025年5月25日)
+2025-08-14 14:19:29,660 - src.service.url_batch_service - INFO - 处理频道 cryptograde 第 5 个视频: https://www.youtube.com/watch?v=tyi9Mt8rxFo
+2025-08-14 14:19:29,661 - src.service.youtube_service - INFO - 正在处理第 5 个视频: https://www.youtube.com/watch?v=tyi9Mt8rxFo
+2025-08-14 14:20:00,042 - src.service.youtube_service - INFO - 成功获取视频信息: 💥$PFVS LISTING UPDATE ON 6 TIERS 27TH MAY | BE REA...
+2025-08-14 14:20:00,043 - src.service.url_batch_service - INFO - 成功获取视频信息: 💥$PFVS LISTING UPDATE ON 6 TIERS 27TH MAY | BE REA...
+2025-08-14 14:20:00,060 - src.service.url_batch_service - INFO - ✓ 有效视频 #5: 💥$PFVS LISTING UPDATE ON 6 TIERS 27TH MAY | BE REA... (发布时间: 2025年5月25日)
+2025-08-14 14:20:00,061 - src.service.url_batch_service - INFO - 处理频道 cryptograde 第 6 个视频: https://www.youtube.com/watch?v=Ox9KsyD_1WU
+2025-08-14 14:20:00,061 - src.service.youtube_service - INFO - 正在处理第 6 个视频: https://www.youtube.com/watch?v=Ox9KsyD_1WU
+2025-08-14 14:20:29,653 - src.service.youtube_service - INFO - 成功获取视频信息: 💥 Parabolic Meme Token Buy Now 1000X GEM💥...
+2025-08-14 14:20:29,653 - src.service.url_batch_service - INFO - 成功获取视频信息: 💥 Parabolic Meme Token Buy Now 1000X GEM💥...
+2025-08-14 14:20:29,674 - src.service.url_batch_service - INFO - ✓ 有效视频 #6: 💥 Parabolic Meme Token Buy Now 1000X GEM💥... (发布时间: 2025年5月22日)
+2025-08-14 14:20:29,675 - src.service.url_batch_service - INFO - 处理频道 cryptograde 第 7 个视频: https://www.youtube.com/watch?v=jqKQC72-sQo
+2025-08-14 14:20:29,675 - src.service.youtube_service - INFO - 正在处理第 7 个视频: https://www.youtube.com/watch?v=jqKQC72-sQo
+2025-08-14 14:20:59,654 - src.service.youtube_service - INFO - 成功获取视频信息: 🚀A new hidden seagull exchange platform💥💫✨ 100X So...
+2025-08-14 14:20:59,655 - src.service.url_batch_service - INFO - 成功获取视频信息: 🚀A new hidden seagull exchange platform💥💫✨ 100X So...
+2025-08-14 14:20:59,689 - src.service.url_batch_service - INFO - ✓ 有效视频 #7: 🚀A new hidden seagull exchange platform💥💫✨ 100X So... (发布时间: 2025年3月24日)
+2025-08-14 14:20:59,693 - src.service.url_batch_service - INFO - 处理频道 cryptograde 第 8 个视频: https://www.youtube.com/watch?v=aGUu2uvpD0g
+2025-08-14 14:20:59,695 - src.service.youtube_service - INFO - 正在处理第 8 个视频: https://www.youtube.com/watch?v=aGUu2uvpD0g
+2025-08-14 14:21:29,772 - src.service.youtube_service - INFO - 成功获取视频信息: Ethena x mexc! Start new event🔥 Grab your rewards ...
+2025-08-14 14:21:29,772 - src.service.url_batch_service - INFO - 成功获取视频信息: Ethena x mexc! Start new event🔥 Grab your rewards ...
+2025-08-14 14:21:29,792 - src.service.url_batch_service - INFO - ✓ 有效视频 #8: Ethena x mexc! Start new event🔥 Grab your rewards ... (发布时间: 2025年3月17日)
+2025-08-14 14:21:29,792 - src.service.url_batch_service - INFO - 处理频道 cryptograde 第 9 个视频: https://www.youtube.com/watch?v=3mzN6MK1kmc
+2025-08-14 14:21:29,792 - src.service.youtube_service - INFO - 正在处理第 9 个视频: https://www.youtube.com/watch?v=3mzN6MK1kmc
+2025-08-14 14:21:59,781 - src.service.youtube_service - INFO - 成功获取视频信息: 🚀Best Earning app cat Russia game play to earn🚀🎮...
+2025-08-14 14:21:59,782 - src.service.url_batch_service - INFO - 成功获取视频信息: 🚀Best Earning app cat Russia game play to earn🚀🎮...
+2025-08-14 14:21:59,805 - src.service.url_batch_service - INFO - ✓ 有效视频 #9: 🚀Best Earning app cat Russia game play to earn🚀🎮... (发布时间: 2025年1月14日)
+2025-08-14 14:21:59,805 - src.service.url_batch_service - INFO - 处理频道 cryptograde 第 10 个视频: https://www.youtube.com/watch?v=yt8TrqD2aV8
+2025-08-14 14:21:59,805 - src.service.youtube_service - INFO - 正在处理第 10 个视频: https://www.youtube.com/watch?v=yt8TrqD2aV8
+2025-08-14 14:22:29,432 - src.service.youtube_service - INFO - 成功获取视频信息: 🚀MIAO LUCKY CAT REVIEW 🔥 JOIN NOW 🔥 GET MORE PROFI...
+2025-08-14 14:22:29,433 - src.service.url_batch_service - INFO - 成功获取视频信息: 🚀MIAO LUCKY CAT REVIEW 🔥 JOIN NOW 🔥 GET MORE PROFI...
+2025-08-14 14:22:29,453 - src.service.url_batch_service - INFO - ✓ 有效视频 #10: 🚀MIAO LUCKY CAT REVIEW 🔥 JOIN NOW 🔥 GET MORE PROFI... (发布时间: 2025年1月7日)
+2025-08-14 14:22:29,454 - src.service.url_batch_service - INFO - 频道 cryptograde 处理完成:
+2025-08-14 14:22:29,454 - src.service.url_batch_service - INFO -   总视频数: 10 个
+2025-08-14 14:22:29,454 - src.service.url_batch_service - INFO -   24小时前视频: 10 个 (计入指定数量)
+2025-08-14 14:22:29,454 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 14:22:29,455 - src.service.url_batch_service - INFO - 频道 cryptograde: 获取 10 个视频 (24小时前: 10个, 24小时内: 0个)
+2025-08-14 14:22:29,455 - src.service.url_batch_service - INFO - 等待 2 秒后继续下一个频道...
+2025-08-14 14:22:31,456 - src.service.url_batch_service - INFO - 正在处理第 4/10 个频道: asma_crypto
+2025-08-14 14:22:31,456 - src.service.url_batch_service - INFO - 开始处理频道: asma_crypto - https://youtube.com/@asma_crypto
+2025-08-14 14:22:31,456 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@asma_crypto/about
+2025-08-14 14:24:17,475 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@asma_crypto/videos
+2025-08-14 14:24:17,476 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@asma_crypto
+2025-08-14 14:24:20,046 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 14:25:30,545 - src.service.url_batch_service - INFO - 从频道 asma_crypto 获取到 10 个视频链接
+2025-08-14 14:25:30,545 - src.service.url_batch_service - INFO - 处理频道 asma_crypto 第 1 个视频: https://www.youtube.com/watch?v=A5TzC46jVQg
+2025-08-14 14:25:30,546 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=A5TzC46jVQg
+2025-08-14 14:26:00,208 - src.service.youtube_service - INFO - 成功获取视频信息: 🌍 Coinflow Official Global Launch | Inside the New...
+2025-08-14 14:26:00,208 - src.service.url_batch_service - INFO - 成功获取视频信息: 🌍 Coinflow Official Global Launch | Inside the New...
+2025-08-14 14:26:00,229 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: 🌍 Coinflow Official Global Launch | Inside the New... (发布时间: 2025年8月13日)
+2025-08-14 14:26:00,230 - src.service.url_batch_service - INFO - 处理频道 asma_crypto 第 2 个视频: https://www.youtube.com/watch?v=2VJKdzNba0c
+2025-08-14 14:26:00,230 - src.service.youtube_service - INFO - 正在处理第 2 个视频: https://www.youtube.com/watch?v=2VJKdzNba0c
+2025-08-14 14:26:30,179 - src.service.youtube_service - INFO - 成功获取视频信息: WEEX SUP Promotion Explained – Educational & Enter...
+2025-08-14 14:26:30,179 - src.service.url_batch_service - INFO - 成功获取视频信息: WEEX SUP Promotion Explained – Educational & Enter...
+2025-08-14 14:26:30,201 - src.service.url_batch_service - INFO - ✓ 有效视频 #2: WEEX SUP Promotion Explained – Educational & Enter... (发布时间: 2025年8月9日)
+2025-08-14 14:26:30,201 - src.service.url_batch_service - INFO - 处理频道 asma_crypto 第 3 个视频: https://www.youtube.com/watch?v=W4WxzOTYn6s
+2025-08-14 14:26:30,201 - src.service.youtube_service - INFO - 正在处理第 3 个视频: https://www.youtube.com/watch?v=W4WxzOTYn6s
+2025-08-14 14:27:00,535 - src.service.youtube_service - INFO - 成功获取视频信息: Skyrexio x BitMart Overview | Crypto Trading Tools...
+2025-08-14 14:27:00,535 - src.service.url_batch_service - INFO - 成功获取视频信息: Skyrexio x BitMart Overview | Crypto Trading Tools...
+2025-08-14 14:27:00,552 - src.service.url_batch_service - INFO - ✓ 有效视频 #3: Skyrexio x BitMart Overview | Crypto Trading Tools... (发布时间: 2025年8月7日)
+2025-08-14 14:27:00,553 - src.service.url_batch_service - INFO - 处理频道 asma_crypto 第 4 个视频: https://www.youtube.com/watch?v=z7zENMZAKAg
+2025-08-14 14:27:00,553 - src.service.youtube_service - INFO - 正在处理第 4 个视频: https://www.youtube.com/watch?v=z7zENMZAKAg
+2025-08-14 14:27:30,569 - src.service.youtube_service - INFO - 成功获取视频信息: Coinflow Global Launch 🌍 | Decentralized Lending P...
+2025-08-14 14:27:30,569 - src.service.url_batch_service - INFO - 成功获取视频信息: Coinflow Global Launch 🌍 | Decentralized Lending P...
+2025-08-14 14:27:30,590 - src.service.url_batch_service - INFO - ✓ 有效视频 #4: Coinflow Global Launch 🌍 | Decentralized Lending P... (发布时间: 2025年8月2日)
+2025-08-14 14:27:30,590 - src.service.url_batch_service - INFO - 处理频道 asma_crypto 第 5 个视频: https://www.youtube.com/watch?v=2eP9Md7Fnzk
+2025-08-14 14:27:30,591 - src.service.youtube_service - INFO - 正在处理第 5 个视频: https://www.youtube.com/watch?v=2eP9Md7Fnzk
+2025-08-14 14:28:00,655 - src.service.youtube_service - INFO - 成功获取视频信息: Solana Eco Campaign by MEXC – Up to $1M in Promoti...
+2025-08-14 14:28:00,655 - src.service.url_batch_service - INFO - 成功获取视频信息: Solana Eco Campaign by MEXC – Up to $1M in Promoti...
+2025-08-14 14:28:00,679 - src.service.url_batch_service - INFO - ✓ 有效视频 #5: Solana Eco Campaign by MEXC – Up to $1M in Promoti... (发布时间: 2025年8月1日)
+2025-08-14 14:28:00,679 - src.service.url_batch_service - INFO - 处理频道 asma_crypto 第 6 个视频: https://www.youtube.com/watch?v=QCOyP-j6wNs
+2025-08-14 14:28:00,679 - src.service.youtube_service - INFO - 正在处理第 6 个视频: https://www.youtube.com/watch?v=QCOyP-j6wNs
+2025-08-14 14:28:30,745 - src.service.youtube_service - INFO - 成功获取视频信息: BlockDAG Network Official Update – Early Access, C...
+2025-08-14 14:28:30,746 - src.service.url_batch_service - INFO - 成功获取视频信息: BlockDAG Network Official Update – Early Access, C...
+2025-08-14 14:28:30,764 - src.service.url_batch_service - INFO - ✓ 有效视频 #6: BlockDAG Network Official Update – Early Access, C... (发布时间: 2025年7月31日)
+2025-08-14 14:28:30,764 - src.service.url_batch_service - INFO - 处理频道 asma_crypto 第 7 个视频: https://www.youtube.com/watch?v=FGF-T1xAKIg
+2025-08-14 14:28:30,765 - src.service.youtube_service - INFO - 正在处理第 7 个视频: https://www.youtube.com/watch?v=FGF-T1xAKIg
+2025-08-14 14:29:00,831 - src.service.youtube_service - INFO - 成功获取视频信息: Explore UBEX: AI-Powered Crypto Contract Strategy ...
+2025-08-14 14:29:00,831 - src.service.url_batch_service - INFO - 成功获取视频信息: Explore UBEX: AI-Powered Crypto Contract Strategy ...
+2025-08-14 14:29:00,859 - src.service.url_batch_service - INFO - ✓ 有效视频 #7: Explore UBEX: AI-Powered Crypto Contract Strategy ... (发布时间: 2025年7月31日)
+2025-08-14 14:29:00,859 - src.service.url_batch_service - INFO - 处理频道 asma_crypto 第 8 个视频: https://www.youtube.com/watch?v=ItXJaB1OcfQ
+2025-08-14 14:29:00,860 - src.service.youtube_service - INFO - 正在处理第 8 个视频: https://www.youtube.com/watch?v=ItXJaB1OcfQ
+2025-08-14 14:29:30,636 - src.service.youtube_service - INFO - 成功获取视频信息: PlayFun Game | Explore This Trending WEB3 Game wit...
+2025-08-14 14:29:30,637 - src.service.url_batch_service - INFO - 成功获取视频信息: PlayFun Game | Explore This Trending WEB3 Game wit...
+2025-08-14 14:29:30,659 - src.service.url_batch_service - INFO - ✓ 有效视频 #8: PlayFun Game | Explore This Trending WEB3 Game wit... (发布时间: 2025年7月29日)
+2025-08-14 14:29:30,659 - src.service.url_batch_service - INFO - 处理频道 asma_crypto 第 9 个视频: https://www.youtube.com/watch?v=5Bi5V_XUtXs
+2025-08-14 14:29:30,659 - src.service.youtube_service - INFO - 正在处理第 9 个视频: https://www.youtube.com/watch?v=5Bi5V_XUtXs
+2025-08-14 14:30:00,528 - src.service.youtube_service - INFO - 成功获取视频信息: Tari Just Launched & It’s Exploding! | Mainnet Is ...
+2025-08-14 14:30:00,529 - src.service.url_batch_service - INFO - 成功获取视频信息: Tari Just Launched & It’s Exploding! | Mainnet Is ...
+2025-08-14 14:30:00,546 - src.service.url_batch_service - INFO - ✓ 有效视频 #9: Tari Just Launched & It’s Exploding! | Mainnet Is ... (发布时间: 2025年7月29日)
+2025-08-14 14:30:00,547 - src.service.url_batch_service - INFO - 处理频道 asma_crypto 第 10 个视频: https://www.youtube.com/watch?v=1o5HeB1iqHk&pp=0gcJCa0JAYcqIYzv
+2025-08-14 14:30:00,547 - src.service.youtube_service - INFO - 正在处理第 10 个视频: https://www.youtube.com/watch?v=1o5HeB1iqHk&pp=0gcJCa0JAYcqIYzv
+2025-08-14 14:30:31,327 - src.service.youtube_service - INFO - 成功获取视频信息: 🧬 Einstein Game | Revolutionizing Science Through ...
+2025-08-14 14:30:31,327 - src.service.url_batch_service - INFO - 成功获取视频信息: 🧬 Einstein Game | Revolutionizing Science Through ...
+2025-08-14 14:30:31,359 - src.service.url_batch_service - INFO - ✓ 有效视频 #10: 🧬 Einstein Game | Revolutionizing Science Through ... (发布时间: 2025年7月24日)
+2025-08-14 14:30:31,360 - src.service.url_batch_service - INFO - 频道 asma_crypto 处理完成:
+2025-08-14 14:30:31,360 - src.service.url_batch_service - INFO -   总视频数: 10 个
+2025-08-14 14:30:31,360 - src.service.url_batch_service - INFO -   24小时前视频: 10 个 (计入指定数量)
+2025-08-14 14:30:31,360 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 14:30:31,361 - src.service.url_batch_service - INFO - 频道 asma_crypto: 获取 10 个视频 (24小时前: 10个, 24小时内: 0个)
+2025-08-14 14:30:31,361 - src.service.url_batch_service - INFO - 等待 2 秒后继续下一个频道...
+2025-08-14 14:30:33,362 - src.service.url_batch_service - INFO - 正在处理第 5/10 个频道: CRYPTOMASTER_786
+2025-08-14 14:30:33,362 - src.service.url_batch_service - INFO - 开始处理频道: CRYPTOMASTER_786 - https://youtube.com/@CRYPTOMASTER_786
+2025-08-14 14:30:33,362 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@CRYPTOMASTER_786/about
+2025-08-14 14:32:20,544 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@CRYPTOMASTER_786/videos
+2025-08-14 14:32:20,544 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@CRYPTOMASTER_786
+2025-08-14 14:32:25,010 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 14:33:35,856 - src.service.url_batch_service - INFO - 从频道 CRYPTOMASTER_786 获取到 10 个视频链接
+2025-08-14 14:33:35,862 - src.service.url_batch_service - INFO - 处理频道 CRYPTOMASTER_786 第 1 个视频: https://www.youtube.com/watch?v=F1n5ZWQErQc
+2025-08-14 14:33:35,863 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=F1n5ZWQErQc
+2025-08-14 14:34:07,174 - src.service.youtube_service - INFO - 成功获取视频信息: WEEX Welcome Event – Official Platform Overview - ...
+2025-08-14 14:34:07,174 - src.service.url_batch_service - INFO - 成功获取视频信息: WEEX Welcome Event – Official Platform Overview - ...
+2025-08-14 14:34:07,223 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: WEEX Welcome Event – Official Platform Overview - ... (发布时间: 2025年8月14日)
+2025-08-14 14:34:07,224 - src.service.url_batch_service - INFO - 处理频道 CRYPTOMASTER_786 第 2 个视频: https://www.youtube.com/watch?v=1Zp7iu3s_9w
+2025-08-14 14:34:07,224 - src.service.youtube_service - INFO - 正在处理第 2 个视频: https://www.youtube.com/watch?v=1Zp7iu3s_9w
+2025-08-14 14:34:38,445 - src.service.youtube_service - INFO - 成功获取视频信息: 🔥 WEEX Q2 Token Burn: 60.5M WXT Destroyed + 1M WXT...
+2025-08-14 14:34:38,445 - src.service.url_batch_service - INFO - 成功获取视频信息: 🔥 WEEX Q2 Token Burn: 60.5M WXT Destroyed + 1M WXT...
+2025-08-14 14:34:38,469 - src.service.url_batch_service - INFO - ✓ 有效视频 #2: 🔥 WEEX Q2 Token Burn: 60.5M WXT Destroyed + 1M WXT... (发布时间: 2025年8月4日)
+2025-08-14 14:34:38,469 - src.service.url_batch_service - INFO - 处理频道 CRYPTOMASTER_786 第 3 个视频: https://www.youtube.com/watch?v=TBdj8R_xRUg
+2025-08-14 14:34:38,471 - src.service.youtube_service - INFO - 正在处理第 3 个视频: https://www.youtube.com/watch?v=TBdj8R_xRUg
+2025-08-14 14:35:09,379 - src.service.youtube_service - INFO - 成功获取视频信息: Coinflow Global Launch 🌍 | Decentralized Lending P...
+2025-08-14 14:35:09,379 - src.service.url_batch_service - INFO - 成功获取视频信息: Coinflow Global Launch 🌍 | Decentralized Lending P...
+2025-08-14 14:35:09,599 - src.service.url_batch_service - INFO - ✓ 有效视频 #3: Coinflow Global Launch 🌍 | Decentralized Lending P... (发布时间: 2025年8月2日)
+2025-08-14 14:35:09,602 - src.service.url_batch_service - INFO - 处理频道 CRYPTOMASTER_786 第 4 个视频: https://www.youtube.com/watch?v=UwljGkGWKOc
+2025-08-14 14:35:09,602 - src.service.youtube_service - INFO - 正在处理第 4 个视频: https://www.youtube.com/watch?v=UwljGkGWKOc
+2025-08-14 14:35:40,826 - src.service.youtube_service - INFO - 成功获取视频信息: Explore SNS Net AI 🌐 Discover Decentralized Techno...
+2025-08-14 14:35:40,826 - src.service.url_batch_service - INFO - 成功获取视频信息: Explore SNS Net AI 🌐 Discover Decentralized Techno...
+2025-08-14 14:35:40,847 - src.service.url_batch_service - INFO - ✓ 有效视频 #4: Explore SNS Net AI 🌐 Discover Decentralized Techno... (发布时间: 2025年7月6日)
+2025-08-14 14:35:40,848 - src.service.url_batch_service - INFO - 处理频道 CRYPTOMASTER_786 第 5 个视频: https://www.youtube.com/watch?v=OI3v7Jk9LGY
+2025-08-14 14:35:40,848 - src.service.youtube_service - INFO - 正在处理第 5 个视频: https://www.youtube.com/watch?v=OI3v7Jk9LGY
+2025-08-14 14:36:11,981 - src.service.youtube_service - INFO - 成功获取视频信息: 💹 Discover Extsy – A Smarter Way to Trade Digital ...
+2025-08-14 14:36:11,981 - src.service.url_batch_service - INFO - 成功获取视频信息: 💹 Discover Extsy – A Smarter Way to Trade Digital ...
+2025-08-14 14:36:11,995 - src.service.url_batch_service - INFO - ✓ 有效视频 #5: 💹 Discover Extsy – A Smarter Way to Trade Digital ... (发布时间: 2025年5月16日)
+2025-08-14 14:36:11,996 - src.service.url_batch_service - INFO - 处理频道 CRYPTOMASTER_786 第 6 个视频: https://www.youtube.com/watch?v=L7T83R0l6Ck
+2025-08-14 14:36:11,996 - src.service.youtube_service - INFO - 正在处理第 6 个视频: https://www.youtube.com/watch?v=L7T83R0l6Ck
+2025-08-14 14:36:42,023 - src.service.youtube_service - INFO - 成功获取视频信息: 🚨 Meet Odom Coin: Lamar Odom’s Web3 Mission for He...
+2025-08-14 14:36:42,023 - src.service.url_batch_service - INFO - 成功获取视频信息: 🚨 Meet Odom Coin: Lamar Odom’s Web3 Mission for He...
+2025-08-14 14:36:42,078 - src.service.url_batch_service - INFO - ✓ 有效视频 #6: 🚨 Meet Odom Coin: Lamar Odom’s Web3 Mission for He... (发布时间: 2025年5月16日)
+2025-08-14 14:36:42,078 - src.service.url_batch_service - INFO - 处理频道 CRYPTOMASTER_786 第 7 个视频: https://www.youtube.com/watch?v=Lyw4chM5GFI
+2025-08-14 14:36:42,078 - src.service.youtube_service - INFO - 正在处理第 7 个视频: https://www.youtube.com/watch?v=Lyw4chM5GFI
+2025-08-14 14:37:12,585 - src.service.youtube_service - INFO - 成功获取视频信息: GCOIN Token Rising Fast! | Watch Honest Review...
+2025-08-14 14:37:12,585 - src.service.url_batch_service - INFO - 成功获取视频信息: GCOIN Token Rising Fast! | Watch Honest Review...
+2025-08-14 14:37:12,649 - src.service.url_batch_service - INFO - ✓ 有效视频 #7: GCOIN Token Rising Fast! | Watch Honest Review... (发布时间: 2025年4月29日)
+2025-08-14 14:37:12,649 - src.service.url_batch_service - INFO - 处理频道 CRYPTOMASTER_786 第 8 个视频: https://www.youtube.com/watch?v=hsxNikzaTSY
+2025-08-14 14:37:12,649 - src.service.youtube_service - INFO - 正在处理第 8 个视频: https://www.youtube.com/watch?v=hsxNikzaTSY
+2025-08-14 14:37:45,204 - src.service.youtube_service - INFO - 成功获取视频信息: Selfmade Billionaire ⭐ Ultimate Fusion of Cooperat...
+2025-08-14 14:37:45,205 - src.service.url_batch_service - INFO - 成功获取视频信息: Selfmade Billionaire ⭐ Ultimate Fusion of Cooperat...
+2025-08-14 14:37:45,227 - src.service.url_batch_service - INFO - ✓ 有效视频 #8: Selfmade Billionaire ⭐ Ultimate Fusion of Cooperat... (发布时间: 2025年4月18日)
+2025-08-14 14:37:45,227 - src.service.url_batch_service - INFO - 处理频道 CRYPTOMASTER_786 第 9 个视频: https://www.youtube.com/watch?v=eaDohCXChnU
+2025-08-14 14:37:45,228 - src.service.youtube_service - INFO - 正在处理第 9 个视频: https://www.youtube.com/watch?v=eaDohCXChnU
+2025-08-14 14:38:15,739 - src.service.youtube_service - INFO - 成功获取视频信息: 🌟 DogetoCoin – Experience Fast, Secure, and Fun Cr...
+2025-08-14 14:38:15,739 - src.service.url_batch_service - INFO - 成功获取视频信息: 🌟 DogetoCoin – Experience Fast, Secure, and Fun Cr...
+2025-08-14 14:38:15,823 - src.service.url_batch_service - INFO - ✓ 有效视频 #9: 🌟 DogetoCoin – Experience Fast, Secure, and Fun Cr... (发布时间: 2025年3月23日)
+2025-08-14 14:38:15,824 - src.service.url_batch_service - INFO - 处理频道 CRYPTOMASTER_786 第 10 个视频: https://www.youtube.com/watch?v=r_5ifR8zZ10
+2025-08-14 14:38:15,824 - src.service.youtube_service - INFO - 正在处理第 10 个视频: https://www.youtube.com/watch?v=r_5ifR8zZ10
+2025-08-14 14:38:47,815 - src.service.youtube_service - INFO - 成功获取视频信息: 🚀 PepeMusk – The Next Big Meme Coin on BSC! 🌕🐸...
+2025-08-14 14:38:47,815 - src.service.url_batch_service - INFO - 成功获取视频信息: 🚀 PepeMusk – The Next Big Meme Coin on BSC! 🌕🐸...
+2025-08-14 14:38:47,834 - src.service.url_batch_service - INFO - ✓ 有效视频 #10: 🚀 PepeMusk – The Next Big Meme Coin on BSC! 🌕🐸... (发布时间: 2025年3月18日)
+2025-08-14 14:38:47,836 - src.service.url_batch_service - INFO - 频道 CRYPTOMASTER_786 处理完成:
+2025-08-14 14:38:47,836 - src.service.url_batch_service - INFO -   总视频数: 10 个
+2025-08-14 14:38:47,836 - src.service.url_batch_service - INFO -   24小时前视频: 10 个 (计入指定数量)
+2025-08-14 14:38:47,836 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 14:38:47,837 - src.service.url_batch_service - INFO - 频道 CRYPTOMASTER_786: 获取 10 个视频 (24小时前: 10个, 24小时内: 0个)
+2025-08-14 14:38:47,837 - src.service.url_batch_service - INFO - 等待 2 秒后继续下一个频道...
+2025-08-14 14:38:49,837 - src.service.url_batch_service - INFO - 正在处理第 6/10 个频道: crypto_aditi_official
+2025-08-14 14:38:49,838 - src.service.url_batch_service - INFO - 开始处理频道: crypto_aditi_official - https://youtube.com/@crypto_aditi_official
+2025-08-14 14:38:49,838 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@crypto_aditi_official/about
+2025-08-14 14:40:35,204 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@crypto_aditi_official/videos
+2025-08-14 14:40:35,205 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@crypto_aditi_official
+2025-08-14 14:40:38,986 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 14:41:49,345 - src.service.url_batch_service - INFO - 从频道 crypto_aditi_official 获取到 10 个视频链接
+2025-08-14 14:41:49,345 - src.service.url_batch_service - INFO - 处理频道 crypto_aditi_official 第 1 个视频: https://www.youtube.com/watch?v=6hhoqKuLq8E
+2025-08-14 14:41:49,346 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=6hhoqKuLq8E
+2025-08-14 14:42:19,189 - src.service.youtube_service - INFO - 成功获取视频信息: Crazy Fox ($CRFX) – The MemeCoin with Real Momentu...
+2025-08-14 14:42:19,189 - src.service.url_batch_service - INFO - 成功获取视频信息: Crazy Fox ($CRFX) – The MemeCoin with Real Momentu...
+2025-08-14 14:42:19,211 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: Crazy Fox ($CRFX) – The MemeCoin with Real Momentu... (发布时间: 2025年7月25日)
+2025-08-14 14:42:19,213 - src.service.url_batch_service - INFO - 处理频道 crypto_aditi_official 第 2 个视频: https://www.youtube.com/watch?v=Hd4AB8cOd90
+2025-08-14 14:42:19,213 - src.service.youtube_service - INFO - 正在处理第 2 个视频: https://www.youtube.com/watch?v=Hd4AB8cOd90
+2025-08-14 14:42:49,218 - src.service.youtube_service - INFO - 成功获取视频信息: KARMA Coin: A Meme Token With Real Purpose | Pay O...
+2025-08-14 14:42:49,218 - src.service.url_batch_service - INFO - 成功获取视频信息: KARMA Coin: A Meme Token With Real Purpose | Pay O...
+2025-08-14 14:42:49,239 - src.service.url_batch_service - INFO - ✓ 有效视频 #2: KARMA Coin: A Meme Token With Real Purpose | Pay O... (发布时间: 2025年7月22日)
+2025-08-14 14:42:49,239 - src.service.url_batch_service - INFO - 处理频道 crypto_aditi_official 第 3 个视频: https://www.youtube.com/watch?v=ym4KLBC-RBA
+2025-08-14 14:42:49,239 - src.service.youtube_service - INFO - 正在处理第 3 个视频: https://www.youtube.com/watch?v=ym4KLBC-RBA
+2025-08-14 14:43:19,293 - src.service.youtube_service - INFO - 成功获取视频信息: SMOOZY $SMZ Explained | Not Just a Meme, It’s a Mo...
+2025-08-14 14:43:19,293 - src.service.url_batch_service - INFO - 成功获取视频信息: SMOOZY $SMZ Explained | Not Just a Meme, It’s a Mo...
+2025-08-14 14:43:19,310 - src.service.url_batch_service - INFO - ✓ 有效视频 #3: SMOOZY $SMZ Explained | Not Just a Meme, It’s a Mo... (发布时间: 2025年7月21日)
+2025-08-14 14:43:19,310 - src.service.url_batch_service - INFO - 处理频道 crypto_aditi_official 第 4 个视频: https://www.youtube.com/watch?v=GDCquAgQMDk
+2025-08-14 14:43:19,310 - src.service.youtube_service - INFO - 正在处理第 4 个视频: https://www.youtube.com/watch?v=GDCquAgQMDk
+2025-08-14 14:43:49,544 - src.service.youtube_service - INFO - 成功获取视频信息: PLAYFUN TOKEN REWRDS 100K POINTS CAN BE EXCHANGE T...
+2025-08-14 14:43:49,544 - src.service.url_batch_service - INFO - 成功获取视频信息: PLAYFUN TOKEN REWRDS 100K POINTS CAN BE EXCHANGE T...
+2025-08-14 14:43:49,561 - src.service.url_batch_service - INFO - ✓ 有效视频 #4: PLAYFUN TOKEN REWRDS 100K POINTS CAN BE EXCHANGE T... (发布时间: 2025年7月21日)
+2025-08-14 14:43:49,561 - src.service.url_batch_service - INFO - 处理频道 crypto_aditi_official 第 5 个视频: https://www.youtube.com/watch?v=XAnNFa02NGQ
+2025-08-14 14:43:49,561 - src.service.youtube_service - INFO - 正在处理第 5 个视频: https://www.youtube.com/watch?v=XAnNFa02NGQ
+2025-08-14 14:44:19,625 - src.service.youtube_service - INFO - 成功获取视频信息: 🎮 GoaL Play: Skill-Based Web3 Game Built in Unity ...
+2025-08-14 14:44:19,627 - src.service.url_batch_service - INFO - 成功获取视频信息: 🎮 GoaL Play: Skill-Based Web3 Game Built in Unity ...
+2025-08-14 14:44:19,645 - src.service.url_batch_service - INFO - ✓ 有效视频 #5: 🎮 GoaL Play: Skill-Based Web3 Game Built in Unity ... (发布时间: 2025年7月21日)
+2025-08-14 14:44:19,646 - src.service.url_batch_service - INFO - 处理频道 crypto_aditi_official 第 6 个视频: https://www.youtube.com/watch?v=632LYGFKOV4
+2025-08-14 14:44:19,647 - src.service.youtube_service - INFO - 正在处理第 6 个视频: https://www.youtube.com/watch?v=632LYGFKOV4
+2025-08-14 14:44:49,585 - src.service.youtube_service - INFO - 成功获取视频信息: 🎉 MOODENG Airdrop on WEEX – Win from $30,000 Prize...
+2025-08-14 14:44:49,585 - src.service.url_batch_service - INFO - 成功获取视频信息: 🎉 MOODENG Airdrop on WEEX – Win from $30,000 Prize...
+2025-08-14 14:44:49,605 - src.service.url_batch_service - INFO - ✓ 有效视频 #6: 🎉 MOODENG Airdrop on WEEX – Win from $30,000 Prize... (发布时间: 2025年7月9日)
+2025-08-14 14:44:49,605 - src.service.url_batch_service - INFO - 处理频道 crypto_aditi_official 第 7 个视频: https://www.youtube.com/watch?v=6M-1RCdRNOQ
+2025-08-14 14:44:49,605 - src.service.youtube_service - INFO - 正在处理第 7 个视频: https://www.youtube.com/watch?v=6M-1RCdRNOQ
+2025-08-14 14:45:20,323 - src.service.youtube_service - INFO - 成功获取视频信息: 🔥 WEEX Trading Season 2: $900,000 in Rewards + $10...
+2025-08-14 14:45:20,324 - src.service.url_batch_service - INFO - 成功获取视频信息: 🔥 WEEX Trading Season 2: $900,000 in Rewards + $10...
+2025-08-14 14:45:20,346 - src.service.url_batch_service - INFO - ✓ 有效视频 #7: 🔥 WEEX Trading Season 2: $900,000 in Rewards + $10... (发布时间: 2025年7月7日)
+2025-08-14 14:45:20,346 - src.service.url_batch_service - INFO - 处理频道 crypto_aditi_official 第 8 个视频: https://www.youtube.com/watch?v=c8GgvY3c-dk
+2025-08-14 14:45:20,347 - src.service.youtube_service - INFO - 正在处理第 8 个视频: https://www.youtube.com/watch?v=c8GgvY3c-dk
+2025-08-14 14:45:50,602 - src.service.youtube_service - INFO - 成功获取视频信息: PLAYFUN: BSC-Based Crypto Game 🎮 | Airdrop LIVE – ...
+2025-08-14 14:45:50,603 - src.service.url_batch_service - INFO - 成功获取视频信息: PLAYFUN: BSC-Based Crypto Game 🎮 | Airdrop LIVE – ...
+2025-08-14 14:45:50,624 - src.service.url_batch_service - INFO - ✓ 有效视频 #8: PLAYFUN: BSC-Based Crypto Game 🎮 | Airdrop LIVE – ... (发布时间: 2025年7月7日)
+2025-08-14 14:45:50,624 - src.service.url_batch_service - INFO - 处理频道 crypto_aditi_official 第 9 个视频: https://www.youtube.com/watch?v=33JTaTonrIE
+2025-08-14 14:45:50,624 - src.service.youtube_service - INFO - 正在处理第 9 个视频: https://www.youtube.com/watch?v=33JTaTonrIE
+2025-08-14 14:46:20,653 - src.service.youtube_service - INFO - 成功获取视频信息: New Meme Game Alert 🔥 Degen Arena – Earn While Pla...
+2025-08-14 14:46:20,653 - src.service.url_batch_service - INFO - 成功获取视频信息: New Meme Game Alert 🔥 Degen Arena – Earn While Pla...
+2025-08-14 14:46:20,678 - src.service.url_batch_service - INFO - ✓ 有效视频 #9: New Meme Game Alert 🔥 Degen Arena – Earn While Pla... (发布时间: 2025年6月15日)
+2025-08-14 14:46:20,678 - src.service.url_batch_service - INFO - 处理频道 crypto_aditi_official 第 10 个视频: https://www.youtube.com/watch?v=u8J_R4QIGXA
+2025-08-14 14:46:20,679 - src.service.youtube_service - INFO - 正在处理第 10 个视频: https://www.youtube.com/watch?v=u8J_R4QIGXA
+2025-08-14 14:46:50,673 - src.service.youtube_service - INFO - 成功获取视频信息: 💡 How to Claim Free Crypto on WEEX | $AURASOL Aird...
+2025-08-14 14:46:50,673 - src.service.url_batch_service - INFO - 成功获取视频信息: 💡 How to Claim Free Crypto on WEEX | $AURASOL Aird...
+2025-08-14 14:46:50,731 - src.service.url_batch_service - INFO - ✓ 有效视频 #10: 💡 How to Claim Free Crypto on WEEX | $AURASOL Aird... (发布时间: 2025年6月12日)
+2025-08-14 14:46:50,732 - src.service.url_batch_service - INFO - 频道 crypto_aditi_official 处理完成:
+2025-08-14 14:46:50,732 - src.service.url_batch_service - INFO -   总视频数: 10 个
+2025-08-14 14:46:50,732 - src.service.url_batch_service - INFO -   24小时前视频: 10 个 (计入指定数量)
+2025-08-14 14:46:50,733 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 14:46:50,733 - src.service.url_batch_service - INFO - 频道 crypto_aditi_official: 获取 10 个视频 (24小时前: 10个, 24小时内: 0个)
+2025-08-14 14:46:50,733 - src.service.url_batch_service - INFO - 等待 2 秒后继续下一个频道...
+2025-08-14 14:46:52,734 - src.service.url_batch_service - INFO - 正在处理第 7/10 个频道: bitzearning6535
+2025-08-14 14:46:52,734 - src.service.url_batch_service - INFO - 开始处理频道: bitzearning6535 - https://youtube.com/@bitzearning6535?si=fLEjp6CJyQN4000M
+2025-08-14 14:46:52,734 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@bitzearning6535/about?si=fLEjp6CJyQN4000M
+2025-08-14 14:48:38,951 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@bitzearning6535/videos?si=fLEjp6CJyQN4000M
+2025-08-14 14:48:38,951 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@bitzearning6535?si=fLEjp6CJyQN4000M
+2025-08-14 14:48:42,419 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 14:49:53,065 - src.service.url_batch_service - INFO - 从频道 bitzearning6535 获取到 10 个视频链接
+2025-08-14 14:49:53,066 - src.service.url_batch_service - INFO - 处理频道 bitzearning6535 第 1 个视频: https://www.youtube.com/watch?v=KXuRuwBz-Bo
+2025-08-14 14:49:53,066 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=KXuRuwBz-Bo
+2025-08-14 14:50:23,206 - src.service.youtube_service - INFO - 成功获取视频信息: BlockDAG Network🚀| Redefining Crypto Scalability i...
+2025-08-14 14:50:23,207 - src.service.url_batch_service - INFO - 成功获取视频信息: BlockDAG Network🚀| Redefining Crypto Scalability i...
+2025-08-14 14:50:23,227 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: BlockDAG Network🚀| Redefining Crypto Scalability i... (发布时间: 2025年8月2日)
+2025-08-14 14:50:23,227 - src.service.url_batch_service - INFO - 处理频道 bitzearning6535 第 2 个视频: https://www.youtube.com/watch?v=F9BksMYVjzU
+2025-08-14 14:50:23,227 - src.service.youtube_service - INFO - 正在处理第 2 个视频: https://www.youtube.com/watch?v=F9BksMYVjzU
+2025-08-14 14:50:53,753 - src.service.youtube_service - INFO - 成功获取视频信息: BrunswijkCoin: A New Era of Decentralized Crowdfun...
+2025-08-14 14:50:53,753 - src.service.url_batch_service - INFO - 成功获取视频信息: BrunswijkCoin: A New Era of Decentralized Crowdfun...
+2025-08-14 14:50:53,779 - src.service.url_batch_service - INFO - ✓ 有效视频 #2: BrunswijkCoin: A New Era of Decentralized Crowdfun... (发布时间: 2025年5月21日)
+2025-08-14 14:50:53,779 - src.service.url_batch_service - INFO - 处理频道 bitzearning6535 第 3 个视频: https://www.youtube.com/watch?v=lwuxzxZ5ntc
+2025-08-14 14:50:53,780 - src.service.youtube_service - INFO - 正在处理第 3 个视频: https://www.youtube.com/watch?v=lwuxzxZ5ntc
+2025-08-14 14:51:24,193 - src.service.youtube_service - INFO - 成功获取视频信息: Happy Balloon Dog Listed on MEXC! 🚀 Meme Coin with...
+2025-08-14 14:51:24,194 - src.service.url_batch_service - INFO - 成功获取视频信息: Happy Balloon Dog Listed on MEXC! 🚀 Meme Coin with...
+2025-08-14 14:51:24,217 - src.service.url_batch_service - INFO - ✓ 有效视频 #3: Happy Balloon Dog Listed on MEXC! 🚀 Meme Coin with... (发布时间: 2025年5月16日)
+2025-08-14 14:51:24,217 - src.service.url_batch_service - INFO - 处理频道 bitzearning6535 第 4 个视频: https://www.youtube.com/watch?v=6-BpK8iEFc8
+2025-08-14 14:51:24,218 - src.service.youtube_service - INFO - 正在处理第 4 个视频: https://www.youtube.com/watch?v=6-BpK8iEFc8
+2025-08-14 14:51:54,410 - src.service.youtube_service - INFO - 成功获取视频信息: Masters Of Trivia - THE BIGGEST TOKEN LAUNCH IN 20...
+2025-08-14 14:51:54,410 - src.service.url_batch_service - INFO - 成功获取视频信息: Masters Of Trivia - THE BIGGEST TOKEN LAUNCH IN 20...
+2025-08-14 14:51:54,430 - src.service.url_batch_service - INFO - ✓ 有效视频 #4: Masters Of Trivia - THE BIGGEST TOKEN LAUNCH IN 20... (发布时间: 2025年4月25日)
+2025-08-14 14:51:54,430 - src.service.url_batch_service - INFO - 处理频道 bitzearning6535 第 5 个视频: https://www.youtube.com/watch?v=rGIytiVWAC4
+2025-08-14 14:51:54,430 - src.service.youtube_service - INFO - 正在处理第 5 个视频: https://www.youtube.com/watch?v=rGIytiVWAC4
+2025-08-14 14:52:24,745 - src.service.youtube_service - INFO - 成功获取视频信息: DOPA WING WING S BEATBOXING SPREADING WORLD WIDE |...
+2025-08-14 14:52:24,746 - src.service.url_batch_service - INFO - 成功获取视频信息: DOPA WING WING S BEATBOXING SPREADING WORLD WIDE |...
+2025-08-14 14:52:24,772 - src.service.url_batch_service - INFO - ✓ 有效视频 #5: DOPA WING WING S BEATBOXING SPREADING WORLD WIDE |... (发布时间: 2025年4月14日)
+2025-08-14 14:52:24,772 - src.service.url_batch_service - INFO - 处理频道 bitzearning6535 第 6 个视频: https://www.youtube.com/watch?v=XNd1xwYnEPc
+2025-08-14 14:52:24,772 - src.service.youtube_service - INFO - 正在处理第 6 个视频: https://www.youtube.com/watch?v=XNd1xwYnEPc
+2025-08-14 14:52:54,923 - src.service.youtube_service - INFO - 成功获取视频信息: KOKO CHAN NEXT BIG THING IN CRYPTO SPACE | BUT IT ...
+2025-08-14 14:52:54,924 - src.service.url_batch_service - INFO - 成功获取视频信息: KOKO CHAN NEXT BIG THING IN CRYPTO SPACE | BUT IT ...
+2025-08-14 14:52:54,971 - src.service.url_batch_service - INFO - ✓ 有效视频 #6: KOKO CHAN NEXT BIG THING IN CRYPTO SPACE | BUT IT ... (发布时间: 2025年4月9日)
+2025-08-14 14:52:54,971 - src.service.url_batch_service - INFO - 处理频道 bitzearning6535 第 7 个视频: https://www.youtube.com/watch?v=SQzoHvms2pI
+2025-08-14 14:52:54,973 - src.service.youtube_service - INFO - 正在处理第 7 个视频: https://www.youtube.com/watch?v=SQzoHvms2pI
+2025-08-14 14:53:25,072 - src.service.youtube_service - INFO - 成功获取视频信息: 💲💰 BIFN TOKEN GIVEAWAY 🚀 Win Your Share of $50,000...
+2025-08-14 14:53:25,073 - src.service.url_batch_service - INFO - 成功获取视频信息: 💲💰 BIFN TOKEN GIVEAWAY 🚀 Win Your Share of $50,000...
+2025-08-14 14:53:25,096 - src.service.url_batch_service - INFO - ✓ 有效视频 #7: 💲💰 BIFN TOKEN GIVEAWAY 🚀 Win Your Share of $50,000... (发布时间: 2025年4月8日)
+2025-08-14 14:53:25,096 - src.service.url_batch_service - INFO - 处理频道 bitzearning6535 第 8 个视频: https://www.youtube.com/watch?v=RK2yHz6Caic
+2025-08-14 14:53:25,097 - src.service.youtube_service - INFO - 正在处理第 8 个视频: https://www.youtube.com/watch?v=RK2yHz6Caic
+2025-08-14 14:53:55,273 - src.service.youtube_service - INFO - 成功获取视频信息: 💲💰 BRETTS BIZ NFTs COLLECTION TO MINT 🔥 UPCOMING S...
+2025-08-14 14:53:55,274 - src.service.url_batch_service - INFO - 成功获取视频信息: 💲💰 BRETTS BIZ NFTs COLLECTION TO MINT 🔥 UPCOMING S...
+2025-08-14 14:53:55,291 - src.service.url_batch_service - INFO - ✓ 有效视频 #8: 💲💰 BRETTS BIZ NFTs COLLECTION TO MINT 🔥 UPCOMING S... (发布时间: 2025年3月29日)
+2025-08-14 14:53:55,292 - src.service.url_batch_service - INFO - 处理频道 bitzearning6535 第 9 个视频: https://www.youtube.com/watch?v=LpZnQl6huwE
+2025-08-14 14:53:55,292 - src.service.youtube_service - INFO - 正在处理第 9 个视频: https://www.youtube.com/watch?v=LpZnQl6huwE
+2025-08-14 14:54:25,854 - src.service.youtube_service - INFO - 成功获取视频信息: 🚀 MEXC DEX+: The Future of Decentralized Trading i...
+2025-08-14 14:54:25,855 - src.service.url_batch_service - INFO - 成功获取视频信息: 🚀 MEXC DEX+: The Future of Decentralized Trading i...
+2025-08-14 14:54:25,879 - src.service.url_batch_service - INFO - ✓ 有效视频 #9: 🚀 MEXC DEX+: The Future of Decentralized Trading i... (发布时间: 2025年3月20日)
+2025-08-14 14:54:25,879 - src.service.url_batch_service - INFO - 处理频道 bitzearning6535 第 10 个视频: https://www.youtube.com/watch?v=LUFcuE9WJ9Y
+2025-08-14 14:54:25,879 - src.service.youtube_service - INFO - 正在处理第 10 个视频: https://www.youtube.com/watch?v=LUFcuE9WJ9Y
+2025-08-14 14:54:56,229 - src.service.youtube_service - INFO - 成功获取视频信息: Hold, Stake, and Multiply Your Earnings – Ethena’s...
+2025-08-14 14:54:56,229 - src.service.url_batch_service - INFO - 成功获取视频信息: Hold, Stake, and Multiply Your Earnings – Ethena’s...
+2025-08-14 14:54:56,248 - src.service.url_batch_service - INFO - ✓ 有效视频 #10: Hold, Stake, and Multiply Your Earnings – Ethena’s... (发布时间: 2025年3月17日)
+2025-08-14 14:54:56,248 - src.service.url_batch_service - INFO - 频道 bitzearning6535 处理完成:
+2025-08-14 14:54:56,249 - src.service.url_batch_service - INFO -   总视频数: 10 个
+2025-08-14 14:54:56,249 - src.service.url_batch_service - INFO -   24小时前视频: 10 个 (计入指定数量)
+2025-08-14 14:54:56,249 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 14:54:56,249 - src.service.url_batch_service - INFO - 频道 bitzearning6535: 获取 10 个视频 (24小时前: 10个, 24小时内: 0个)
+2025-08-14 14:54:56,250 - src.service.url_batch_service - INFO - 等待 2 秒后继续下一个频道...
+2025-08-14 14:54:58,252 - src.service.url_batch_service - INFO - 正在处理第 8/10 个频道: bitbloomcrypto
+2025-08-14 14:54:58,252 - src.service.url_batch_service - INFO - 开始处理频道: bitbloomcrypto - https://youtube.com/@bitbloomcrypto
+2025-08-14 14:54:58,253 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@bitbloomcrypto/about
+2025-08-14 14:56:43,641 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@bitbloomcrypto/videos
+2025-08-14 14:56:43,642 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@bitbloomcrypto
+2025-08-14 14:56:47,003 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 14:57:57,515 - src.service.url_batch_service - INFO - 从频道 bitbloomcrypto 获取到 10 个视频链接
+2025-08-14 14:57:57,517 - src.service.url_batch_service - INFO - 处理频道 bitbloomcrypto 第 1 个视频: https://www.youtube.com/watch?v=QP_dyf8n7sE
+2025-08-14 14:57:57,517 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=QP_dyf8n7sE
+2025-08-14 14:58:27,943 - src.service.youtube_service - INFO - 成功获取视频信息: WEEX TROLLSOL Update || Explore • Trade • Connect ...
+2025-08-14 14:58:27,944 - src.service.url_batch_service - INFO - 成功获取视频信息: WEEX TROLLSOL Update || Explore • Trade • Connect ...
+2025-08-14 14:58:27,971 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: WEEX TROLLSOL Update || Explore • Trade • Connect ... (发布时间: 2025年8月12日)
+2025-08-14 14:58:27,971 - src.service.url_batch_service - INFO - 处理频道 bitbloomcrypto 第 2 个视频: https://www.youtube.com/watch?v=pb6oqJ6xrj0
+2025-08-14 14:58:27,971 - src.service.youtube_service - INFO - 正在处理第 2 个视频: https://www.youtube.com/watch?v=pb6oqJ6xrj0
+2025-08-14 14:58:58,313 - src.service.youtube_service - INFO - 成功获取视频信息: HOW SYNERGY SMART WORKS | WEB3 CRYPTO PLATFORM | D...
+2025-08-14 14:58:58,316 - src.service.url_batch_service - INFO - 成功获取视频信息: HOW SYNERGY SMART WORKS | WEB3 CRYPTO PLATFORM | D...
+2025-08-14 14:58:58,343 - src.service.url_batch_service - INFO - ✓ 有效视频 #2: HOW SYNERGY SMART WORKS | WEB3 CRYPTO PLATFORM | D... (发布时间: 2025年8月6日)
+2025-08-14 14:58:58,344 - src.service.url_batch_service - INFO - 处理频道 bitbloomcrypto 第 3 个视频: https://www.youtube.com/watch?v=KuqDQJrKVMI
+2025-08-14 14:58:58,344 - src.service.youtube_service - INFO - 正在处理第 3 个视频: https://www.youtube.com/watch?v=KuqDQJrKVMI
+2025-08-14 14:59:29,951 - src.service.youtube_service - INFO - 成功获取视频信息: What is Savitri Network? | Discover the SAVI Coin ...
+2025-08-14 14:59:29,952 - src.service.url_batch_service - INFO - 成功获取视频信息: What is Savitri Network? | Discover the SAVI Coin ...
+2025-08-14 14:59:29,978 - src.service.url_batch_service - INFO - ✓ 有效视频 #3: What is Savitri Network? | Discover the SAVI Coin ... (发布时间: 2025年8月5日)
+2025-08-14 14:59:29,978 - src.service.url_batch_service - INFO - 处理频道 bitbloomcrypto 第 4 个视频: https://www.youtube.com/watch?v=MmLgcHKpE5A
+2025-08-14 14:59:29,978 - src.service.youtube_service - INFO - 正在处理第 4 个视频: https://www.youtube.com/watch?v=MmLgcHKpE5A
+2025-08-14 15:00:00,376 - src.service.youtube_service - INFO - 成功获取视频信息: BDC Token Review | Features, Roadmap and Vision | ...
+2025-08-14 15:00:00,377 - src.service.url_batch_service - INFO - 成功获取视频信息: BDC Token Review | Features, Roadmap and Vision | ...
+2025-08-14 15:00:00,401 - src.service.url_batch_service - INFO - ✓ 有效视频 #4: BDC Token Review | Features, Roadmap and Vision | ... (发布时间: 2025年8月3日)
+2025-08-14 15:00:00,402 - src.service.url_batch_service - INFO - 处理频道 bitbloomcrypto 第 5 个视频: https://www.youtube.com/watch?v=_aolSMJ6mfY
+2025-08-14 15:00:00,402 - src.service.youtube_service - INFO - 正在处理第 5 个视频: https://www.youtube.com/watch?v=_aolSMJ6mfY
+2025-08-14 15:00:30,705 - src.service.youtube_service - INFO - 成功获取视频信息: Donald Trump Jr. Supports De.Fi Coinbase & Binance...
+2025-08-14 15:00:30,706 - src.service.url_batch_service - INFO - 成功获取视频信息: Donald Trump Jr. Supports De.Fi Coinbase & Binance...
+2025-08-14 15:00:30,802 - src.service.url_batch_service - INFO - ✓ 有效视频 #5: Donald Trump Jr. Supports De.Fi Coinbase & Binance... (发布时间: 2025年7月24日)
+2025-08-14 15:00:30,802 - src.service.url_batch_service - INFO - 处理频道 bitbloomcrypto 第 6 个视频: https://www.youtube.com/watch?v=PzADlbxPXCI&pp=0gcJCa0JAYcqIYzv
+2025-08-14 15:00:30,803 - src.service.youtube_service - INFO - 正在处理第 6 个视频: https://www.youtube.com/watch?v=PzADlbxPXCI&pp=0gcJCa0JAYcqIYzv
+2025-08-14 15:01:01,482 - src.service.youtube_service - INFO - 成功获取视频信息: $SMOOZY Platform Review || Use Cases, Features & R...
+2025-08-14 15:01:01,482 - src.service.url_batch_service - INFO - 成功获取视频信息: $SMOOZY Platform Review || Use Cases, Features & R...
+2025-08-14 15:01:01,508 - src.service.url_batch_service - INFO - ✓ 有效视频 #6: $SMOOZY Platform Review || Use Cases, Features & R... (发布时间: 2025年7月22日)
+2025-08-14 15:01:01,508 - src.service.url_batch_service - INFO - 处理频道 bitbloomcrypto 第 7 个视频: https://www.youtube.com/watch?v=Dc3Uhdtwg-0
+2025-08-14 15:01:01,509 - src.service.youtube_service - INFO - 正在处理第 7 个视频: https://www.youtube.com/watch?v=Dc3Uhdtwg-0
+2025-08-14 15:01:31,691 - src.service.youtube_service - INFO - 成功获取视频信息: LoopCoin ($LPC) on Solana || Trade Earn, Burn, | D...
+2025-08-14 15:01:31,692 - src.service.url_batch_service - INFO - 成功获取视频信息: LoopCoin ($LPC) on Solana || Trade Earn, Burn, | D...
+2025-08-14 15:01:31,719 - src.service.url_batch_service - INFO - ✓ 有效视频 #7: LoopCoin ($LPC) on Solana || Trade Earn, Burn, | D... (发布时间: 2025年7月18日)
+2025-08-14 15:01:31,719 - src.service.url_batch_service - INFO - 处理频道 bitbloomcrypto 第 8 个视频: https://www.youtube.com/watch?v=3xYK-0BeH4c
+2025-08-14 15:01:31,721 - src.service.youtube_service - INFO - 正在处理第 8 个视频: https://www.youtube.com/watch?v=3xYK-0BeH4c
+2025-08-14 15:02:02,063 - src.service.youtube_service - INFO - 成功获取视频信息: DISP Token Unveiled || Betting Meets Blockchain ||...
+2025-08-14 15:02:02,064 - src.service.url_batch_service - INFO - 成功获取视频信息: DISP Token Unveiled || Betting Meets Blockchain ||...
+2025-08-14 15:02:02,088 - src.service.url_batch_service - INFO - ✓ 有效视频 #8: DISP Token Unveiled || Betting Meets Blockchain ||... (发布时间: 2025年6月27日)
+2025-08-14 15:02:02,088 - src.service.url_batch_service - INFO - 处理频道 bitbloomcrypto 第 9 个视频: https://www.youtube.com/watch?v=7Qn3b-UW-Dc
+2025-08-14 15:02:02,089 - src.service.youtube_service - INFO - 正在处理第 9 个视频: https://www.youtube.com/watch?v=7Qn3b-UW-Dc
+2025-08-14 15:02:32,399 - src.service.youtube_service - INFO - 成功获取视频信息: NEW DEGEN ARENA GAME PLAY | Free-to-Play Blockchai...
+2025-08-14 15:02:32,399 - src.service.url_batch_service - INFO - 成功获取视频信息: NEW DEGEN ARENA GAME PLAY | Free-to-Play Blockchai...
+2025-08-14 15:02:32,418 - src.service.url_batch_service - INFO - ✓ 有效视频 #9: NEW DEGEN ARENA GAME PLAY | Free-to-Play Blockchai... (发布时间: 2025年6月15日)
+2025-08-14 15:02:32,418 - src.service.url_batch_service - INFO - 处理频道 bitbloomcrypto 第 10 个视频: https://www.youtube.com/watch?v=GFIKPfmpAbg
+2025-08-14 15:02:32,419 - src.service.youtube_service - INFO - 正在处理第 10 个视频: https://www.youtube.com/watch?v=GFIKPfmpAbg
+2025-08-14 15:03:02,627 - src.service.youtube_service - INFO - 成功获取视频信息: Explore Stauweb | Your Gateway to Digital Wonders!...
+2025-08-14 15:03:02,627 - src.service.url_batch_service - INFO - 成功获取视频信息: Explore Stauweb | Your Gateway to Digital Wonders!...
+2025-08-14 15:03:02,654 - src.service.url_batch_service - INFO - ✓ 有效视频 #10: Explore Stauweb | Your Gateway to Digital Wonders!... (发布时间: 2025年6月13日)
+2025-08-14 15:03:02,655 - src.service.url_batch_service - INFO - 频道 bitbloomcrypto 处理完成:
+2025-08-14 15:03:02,655 - src.service.url_batch_service - INFO -   总视频数: 10 个
+2025-08-14 15:03:02,655 - src.service.url_batch_service - INFO -   24小时前视频: 10 个 (计入指定数量)
+2025-08-14 15:03:02,656 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 15:03:02,656 - src.service.url_batch_service - INFO - 频道 bitbloomcrypto: 获取 10 个视频 (24小时前: 10个, 24小时内: 0个)
+2025-08-14 15:03:02,657 - src.service.url_batch_service - INFO - 等待 2 秒后继续下一个频道...
+2025-08-14 15:03:04,658 - src.service.url_batch_service - INFO - 正在处理第 9/10 个频道: crypto_zombie_yt
+2025-08-14 15:03:04,658 - src.service.url_batch_service - INFO - 开始处理频道: crypto_zombie_yt - https://youtube.com/@crypto_zombie_yt?si=NVTHWAQt5HU-sQWa
+2025-08-14 15:03:04,659 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@crypto_zombie_yt/about?si=NVTHWAQt5HU-sQWa
+2025-08-14 15:04:50,546 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@crypto_zombie_yt/videos?si=NVTHWAQt5HU-sQWa
+2025-08-14 15:04:50,546 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@crypto_zombie_yt?si=NVTHWAQt5HU-sQWa
+2025-08-14 15:04:53,963 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 15:06:04,445 - src.service.url_batch_service - INFO - 从频道 crypto_zombie_yt 获取到 10 个视频链接
+2025-08-14 15:06:04,446 - src.service.url_batch_service - INFO - 处理频道 crypto_zombie_yt 第 1 个视频: https://www.youtube.com/watch?v=Xr8XPUdAyGw
+2025-08-14 15:06:04,446 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=Xr8XPUdAyGw
+2025-08-14 15:06:35,054 - src.service.youtube_service - INFO - 成功获取视频信息: Crypto Smart network NEXT UNIQUE PROJECT 2025...
+2025-08-14 15:06:35,054 - src.service.url_batch_service - INFO - 成功获取视频信息: Crypto Smart network NEXT UNIQUE PROJECT 2025...
+2025-08-14 15:06:35,079 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: Crypto Smart network NEXT UNIQUE PROJECT 2025... (发布时间: 2025年6月21日)
+2025-08-14 15:06:35,079 - src.service.url_batch_service - INFO - 处理频道 crypto_zombie_yt 第 2 个视频: https://www.youtube.com/watch?v=jzOsVjOMeeI
+2025-08-14 15:06:35,080 - src.service.youtube_service - INFO - 正在处理第 2 个视频: https://www.youtube.com/watch?v=jzOsVjOMeeI
+2025-08-14 15:07:05,785 - src.service.youtube_service - INFO - 成功获取视频信息: Masters of trivia complete Review 2025 NEXT GEM 🚀...
+2025-08-14 15:07:05,785 - src.service.url_batch_service - INFO - 成功获取视频信息: Masters of trivia complete Review 2025 NEXT GEM 🚀...
+2025-08-14 15:07:05,804 - src.service.url_batch_service - INFO - ✓ 有效视频 #2: Masters of trivia complete Review 2025 NEXT GEM 🚀... (发布时间: 2025年6月10日)
+2025-08-14 15:07:05,805 - src.service.url_batch_service - INFO - 处理频道 crypto_zombie_yt 第 3 个视频: https://www.youtube.com/watch?v=gw58C7aaqzo
+2025-08-14 15:07:05,805 - src.service.youtube_service - INFO - 正在处理第 3 个视频: https://www.youtube.com/watch?v=gw58C7aaqzo
+2025-08-14 15:07:35,985 - src.service.youtube_service - INFO - 成功获取视频信息: BEST CRYPTO MEME Coin Hydrogen TOKEN 🔥 NEXT 100 X ...
+2025-08-14 15:07:35,985 - src.service.url_batch_service - INFO - 成功获取视频信息: BEST CRYPTO MEME Coin Hydrogen TOKEN 🔥 NEXT 100 X ...
+2025-08-14 15:07:36,008 - src.service.url_batch_service - INFO - ✓ 有效视频 #3: BEST CRYPTO MEME Coin Hydrogen TOKEN 🔥 NEXT 100 X ... (发布时间: 2025年6月9日)
+2025-08-14 15:07:36,008 - src.service.url_batch_service - INFO - 处理频道 crypto_zombie_yt 第 4 个视频: https://www.youtube.com/watch?v=6IRNSpbp0a8
+2025-08-14 15:07:36,008 - src.service.youtube_service - INFO - 正在处理第 4 个视频: https://www.youtube.com/watch?v=6IRNSpbp0a8
+2025-08-14 15:08:05,996 - src.service.youtube_service - INFO - 成功获取视频信息: Deep shark best meme Coin 2025 ✅...
+2025-08-14 15:08:05,997 - src.service.url_batch_service - INFO - 成功获取视频信息: Deep shark best meme Coin 2025 ✅...
+2025-08-14 15:08:06,012 - src.service.url_batch_service - INFO - ✓ 有效视频 #4: Deep shark best meme Coin 2025 ✅... (发布时间: 2025年6月9日)
+2025-08-14 15:08:06,013 - src.service.url_batch_service - INFO - 处理频道 crypto_zombie_yt 第 5 个视频: https://www.youtube.com/watch?v=DnGMyIVNwPE
+2025-08-14 15:08:06,013 - src.service.youtube_service - INFO - 正在处理第 5 个视频: https://www.youtube.com/watch?v=DnGMyIVNwPE
+2025-08-14 15:08:36,109 - src.service.youtube_service - INFO - 成功获取视频信息: Puff listed soon top six exchange...
+2025-08-14 15:08:36,110 - src.service.url_batch_service - INFO - 成功获取视频信息: Puff listed soon top six exchange...
+2025-08-14 15:08:36,130 - src.service.url_batch_service - INFO - ✓ 有效视频 #5: Puff listed soon top six exchange... (发布时间: 2025年5月25日)
+2025-08-14 15:08:36,130 - src.service.url_batch_service - INFO - 处理频道 crypto_zombie_yt 第 6 个视频: https://www.youtube.com/watch?v=60D_xNWFfzE
+2025-08-14 15:08:36,130 - src.service.youtube_service - INFO - 正在处理第 6 个视频: https://www.youtube.com/watch?v=60D_xNWFfzE
+2025-08-14 15:09:06,319 - src.service.youtube_service - INFO - 成功获取视频信息: Puff verse next 100 X Potential...
+2025-08-14 15:09:06,319 - src.service.url_batch_service - INFO - 成功获取视频信息: Puff verse next 100 X Potential...
+2025-08-14 15:09:06,340 - src.service.url_batch_service - INFO - ✓ 有效视频 #6: Puff verse next 100 X Potential... (发布时间: 2025年5月25日)
+2025-08-14 15:09:06,341 - src.service.url_batch_service - INFO - 处理频道 crypto_zombie_yt 第 7 个视频: https://www.youtube.com/watch?v=o0YQlB00Qe4
+2025-08-14 15:09:06,341 - src.service.youtube_service - INFO - 正在处理第 7 个视频: https://www.youtube.com/watch?v=o0YQlB00Qe4
+2025-08-14 15:09:36,304 - src.service.youtube_service - INFO - 成功获取视频信息: EXTSY EXCHANGE BEST Crypto TRADING Project 🔥🔥...
+2025-08-14 15:09:36,306 - src.service.url_batch_service - INFO - 成功获取视频信息: EXTSY EXCHANGE BEST Crypto TRADING Project 🔥🔥...
+2025-08-14 15:09:36,327 - src.service.url_batch_service - INFO - ✓ 有效视频 #7: EXTSY EXCHANGE BEST Crypto TRADING Project 🔥🔥... (发布时间: 2025年5月15日)
+2025-08-14 15:09:36,329 - src.service.url_batch_service - INFO - 处理频道 crypto_zombie_yt 第 8 个视频: https://www.youtube.com/watch?v=6vZMrjixprw
+2025-08-14 15:09:36,329 - src.service.youtube_service - INFO - 正在处理第 8 个视频: https://www.youtube.com/watch?v=6vZMrjixprw
+2025-08-14 15:10:06,629 - src.service.youtube_service - INFO - 成功获取视频信息: QUANTUM X GLOBAL NETWORK THE Future OF DIGITAL FIN...
+2025-08-14 15:10:06,630 - src.service.url_batch_service - INFO - 成功获取视频信息: QUANTUM X GLOBAL NETWORK THE Future OF DIGITAL FIN...
+2025-08-14 15:10:06,647 - src.service.url_batch_service - INFO - ✓ 有效视频 #8: QUANTUM X GLOBAL NETWORK THE Future OF DIGITAL FIN... (发布时间: 2025年5月9日)
+2025-08-14 15:10:06,647 - src.service.url_batch_service - INFO - 处理频道 crypto_zombie_yt 第 9 个视频: https://www.youtube.com/watch?v=Ov-jEdBNo80
+2025-08-14 15:10:06,647 - src.service.youtube_service - INFO - 正在处理第 9 个视频: https://www.youtube.com/watch?v=Ov-jEdBNo80
+2025-08-14 15:10:36,635 - src.service.youtube_service - INFO - 成功获取视频信息: A new best game play project self made billionaire...
+2025-08-14 15:10:36,635 - src.service.url_batch_service - INFO - 成功获取视频信息: A new best game play project self made billionaire...
+2025-08-14 15:10:36,666 - src.service.url_batch_service - INFO - ✓ 有效视频 #9: A new best game play project self made billionaire... (发布时间: 2025年4月11日)
+2025-08-14 15:10:36,667 - src.service.url_batch_service - INFO - 处理频道 crypto_zombie_yt 第 10 个视频: https://www.youtube.com/watch?v=igGOFSeJhkk
+2025-08-14 15:10:36,667 - src.service.youtube_service - INFO - 正在处理第 10 个视频: https://www.youtube.com/watch?v=igGOFSeJhkk
+2025-08-14 15:11:06,869 - src.service.youtube_service - INFO - 成功获取视频信息: 🔥A new HIDDEN GEM DAW dev is working 🔥BEST MEME CO...
+2025-08-14 15:11:06,869 - src.service.url_batch_service - INFO - 成功获取视频信息: 🔥A new HIDDEN GEM DAW dev is working 🔥BEST MEME CO...
+2025-08-14 15:11:06,907 - src.service.url_batch_service - INFO - ✓ 有效视频 #10: 🔥A new HIDDEN GEM DAW dev is working 🔥BEST MEME CO... (发布时间: 2025年3月29日)
+2025-08-14 15:11:06,908 - src.service.url_batch_service - INFO - 频道 crypto_zombie_yt 处理完成:
+2025-08-14 15:11:06,908 - src.service.url_batch_service - INFO -   总视频数: 10 个
+2025-08-14 15:11:06,909 - src.service.url_batch_service - INFO -   24小时前视频: 10 个 (计入指定数量)
+2025-08-14 15:11:06,909 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 15:11:06,909 - src.service.url_batch_service - INFO - 频道 crypto_zombie_yt: 获取 10 个视频 (24小时前: 10个, 24小时内: 0个)
+2025-08-14 15:11:06,909 - src.service.url_batch_service - INFO - 等待 2 秒后继续下一个频道...
+2025-08-14 15:11:08,911 - src.service.url_batch_service - INFO - 正在处理第 10/10 个频道: bitgirlcrypto916
+2025-08-14 15:11:08,911 - src.service.url_batch_service - INFO - 开始处理频道: bitgirlcrypto916 - https://youtube.com/@bitgirlcrypto916?si=wKqaBspqap0N577-
+2025-08-14 15:11:08,911 - src.service.url_batch_service - INFO - 访问频道关于页: https://youtube.com/@bitgirlcrypto916/about?si=wKqaBspqap0N577-
+2025-08-14 15:12:54,959 - src.service.url_batch_service - INFO - 访问频道页面: https://youtube.com/@bitgirlcrypto916/videos?si=wKqaBspqap0N577-
+2025-08-14 15:12:54,960 - src.service.url_batch_service - INFO - 原始URL: https://youtube.com/@bitgirlcrypto916?si=wKqaBspqap0N577-
+2025-08-14 15:12:56,270 - src.service.url_batch_service - INFO - 正在加载频道视频...
+2025-08-14 15:14:07,941 - src.service.url_batch_service - INFO - 从频道 bitgirlcrypto916 获取到 10 个视频链接
+2025-08-14 15:14:07,941 - src.service.url_batch_service - INFO - 处理频道 bitgirlcrypto916 第 1 个视频: https://www.youtube.com/watch?v=IuCp6C3hlCE
+2025-08-14 15:14:07,942 - src.service.youtube_service - INFO - 正在处理第 1 个视频: https://www.youtube.com/watch?v=IuCp6C3hlCE
+2025-08-14 15:14:38,003 - src.service.youtube_service - INFO - 成功获取视频信息: 🔥🔥COIN FLOW PLATFORM LAUNCHED SOON 🔥...
+2025-08-14 15:14:38,005 - src.service.url_batch_service - INFO - 成功获取视频信息: 🔥🔥COIN FLOW PLATFORM LAUNCHED SOON 🔥...
+2025-08-14 15:14:38,048 - src.service.url_batch_service - INFO - ✓ 有效视频 #1: 🔥🔥COIN FLOW PLATFORM LAUNCHED SOON 🔥... (发布时间: 2025年8月13日)
+2025-08-14 15:14:38,050 - src.service.url_batch_service - INFO - 处理频道 bitgirlcrypto916 第 2 个视频: https://www.youtube.com/watch?v=tXlbxLbqGEU
+2025-08-14 15:14:38,051 - src.service.youtube_service - INFO - 正在处理第 2 个视频: https://www.youtube.com/watch?v=tXlbxLbqGEU
+2025-08-14 15:15:08,062 - src.service.youtube_service - INFO - 成功获取视频信息: 🦊🔥CRAZY FOX MEME COIN PROJECT FULL REVIEW🔥🦊...
+2025-08-14 15:15:08,062 - src.service.url_batch_service - INFO - 成功获取视频信息: 🦊🔥CRAZY FOX MEME COIN PROJECT FULL REVIEW🔥🦊...
+2025-08-14 15:15:08,082 - src.service.url_batch_service - INFO - ✓ 有效视频 #2: 🦊🔥CRAZY FOX MEME COIN PROJECT FULL REVIEW🔥🦊... (发布时间: 2025年7月26日)
+2025-08-14 15:15:08,083 - src.service.url_batch_service - INFO - 处理频道 bitgirlcrypto916 第 3 个视频: https://www.youtube.com/watch?v=Arvgv_-PW1M
+2025-08-14 15:15:08,083 - src.service.youtube_service - INFO - 正在处理第 3 个视频: https://www.youtube.com/watch?v=Arvgv_-PW1M
+2025-08-14 15:15:38,019 - src.service.youtube_service - INFO - 成功获取视频信息: - 🔥Free 25 USDT Bonus | GetX Crypto Exchange | Reg...
+2025-08-14 15:15:38,020 - src.service.url_batch_service - INFO - 成功获取视频信息: - 🔥Free 25 USDT Bonus | GetX Crypto Exchange | Reg...
+2025-08-14 15:15:38,041 - src.service.url_batch_service - INFO - ✓ 有效视频 #3: - 🔥Free 25 USDT Bonus | GetX Crypto Exchange | Reg... (发布时间: 2025年6月20日)
+2025-08-14 15:15:38,041 - src.service.url_batch_service - INFO - 处理频道 bitgirlcrypto916 第 4 个视频: https://www.youtube.com/watch?v=_Y4tZiKc-GM
+2025-08-14 15:15:38,041 - src.service.youtube_service - INFO - 正在处理第 4 个视频: https://www.youtube.com/watch?v=_Y4tZiKc-GM
+2025-08-14 15:16:08,240 - src.service.youtube_service - INFO - 成功获取视频信息: 🔥🔥KOTAI PROJECT 🔥 REVOLUTIONIZING WEB3 INFRASTRUCT...
+2025-08-14 15:16:08,241 - src.service.url_batch_service - INFO - 成功获取视频信息: 🔥🔥KOTAI PROJECT 🔥 REVOLUTIONIZING WEB3 INFRASTRUCT...
+2025-08-14 15:16:08,265 - src.service.url_batch_service - INFO - ✓ 有效视频 #4: 🔥🔥KOTAI PROJECT 🔥 REVOLUTIONIZING WEB3 INFRASTRUCT... (发布时间: 2025年6月16日)
+2025-08-14 15:16:08,265 - src.service.url_batch_service - INFO - 处理频道 bitgirlcrypto916 第 5 个视频: https://www.youtube.com/watch?v=yDcSRLD6_oY
+2025-08-14 15:16:08,265 - src.service.youtube_service - INFO - 正在处理第 5 个视频: https://www.youtube.com/watch?v=yDcSRLD6_oY
+2025-08-14 15:16:38,553 - src.service.youtube_service - INFO - 成功获取视频信息: 🐻🔥TEDDY PUFF TOKEN PRESALE IS LIVE 2025 | JONI NOW...
+2025-08-14 15:16:38,553 - src.service.url_batch_service - INFO - 成功获取视频信息: 🐻🔥TEDDY PUFF TOKEN PRESALE IS LIVE 2025 | JONI NOW...
+2025-08-14 15:16:38,573 - src.service.url_batch_service - INFO - ✓ 有效视频 #5: 🐻🔥TEDDY PUFF TOKEN PRESALE IS LIVE 2025 | JONI NOW... (发布时间: 2025年6月14日)
+2025-08-14 15:16:38,573 - src.service.url_batch_service - INFO - 处理频道 bitgirlcrypto916 第 6 个视频: https://www.youtube.com/watch?v=NjM_i4hFT-k
+2025-08-14 15:16:38,575 - src.service.youtube_service - INFO - 正在处理第 6 个视频: https://www.youtube.com/watch?v=NjM_i4hFT-k
+2025-08-14 15:17:08,403 - src.service.youtube_service - INFO - 成功获取视频信息: 🎮🔥BEST GAMING PROJECT SELFMADE BILLIONAIRE BIG OPP...
+2025-08-14 15:17:08,404 - src.service.url_batch_service - INFO - 成功获取视频信息: 🎮🔥BEST GAMING PROJECT SELFMADE BILLIONAIRE BIG OPP...
+2025-08-14 15:17:08,422 - src.service.url_batch_service - INFO - ✓ 有效视频 #6: 🎮🔥BEST GAMING PROJECT SELFMADE BILLIONAIRE BIG OPP... (发布时间: 2025年6月10日)
+2025-08-14 15:17:08,422 - src.service.url_batch_service - INFO - 处理频道 bitgirlcrypto916 第 7 个视频: https://www.youtube.com/watch?v=Z-IFUSho2cA
+2025-08-14 15:17:08,423 - src.service.youtube_service - INFO - 正在处理第 7 个视频: https://www.youtube.com/watch?v=Z-IFUSho2cA
+2025-08-14 15:17:38,566 - src.service.youtube_service - INFO - 成功获取视频信息: 🔥🔥Don't Forget To Join Stake neo pepe Meme coin Fu...
+2025-08-14 15:17:38,566 - src.service.url_batch_service - INFO - 成功获取视频信息: 🔥🔥Don't Forget To Join Stake neo pepe Meme coin Fu...
+2025-08-14 15:17:38,586 - src.service.url_batch_service - INFO - ✓ 有效视频 #7: 🔥🔥Don't Forget To Join Stake neo pepe Meme coin Fu... (发布时间: 2025年6月10日)
+2025-08-14 15:17:38,586 - src.service.url_batch_service - INFO - 处理频道 bitgirlcrypto916 第 8 个视频: https://www.youtube.com/watch?v=VIV6gSkQBxs
+2025-08-14 15:17:38,586 - src.service.youtube_service - INFO - 正在处理第 8 个视频: https://www.youtube.com/watch?v=VIV6gSkQBxs
+2025-08-14 15:18:08,510 - src.service.youtube_service - INFO - 成功获取视频信息: 🚀PUVERE, LISTING NO TO 6 EXCHANG 1000 X GEM🚀...
+2025-08-14 15:18:08,510 - src.service.url_batch_service - INFO - 成功获取视频信息: 🚀PUVERE, LISTING NO TO 6 EXCHANG 1000 X GEM🚀...
+2025-08-14 15:18:08,533 - src.service.url_batch_service - INFO - ✓ 有效视频 #8: 🚀PUVERE, LISTING NO TO 6 EXCHANG 1000 X GEM🚀... (发布时间: 2025年5月25日)
+2025-08-14 15:18:08,534 - src.service.url_batch_service - INFO - 处理频道 bitgirlcrypto916 第 9 个视频: https://www.youtube.com/watch?v=3nrArBHmiP0
+2025-08-14 15:18:08,534 - src.service.youtube_service - INFO - 正在处理第 9 个视频: https://www.youtube.com/watch?v=3nrArBHmiP0
+2025-08-14 15:18:38,777 - src.service.youtube_service - INFO - 成功获取视频信息: 🔥🎮PUVERSE🔥1000X POTENTIAL GEM🔥...
+2025-08-14 15:18:38,778 - src.service.url_batch_service - INFO - 成功获取视频信息: 🔥🎮PUVERSE🔥1000X POTENTIAL GEM🔥...
+2025-08-14 15:18:38,796 - src.service.url_batch_service - INFO - ✓ 有效视频 #9: 🔥🎮PUVERSE🔥1000X POTENTIAL GEM🔥... (发布时间: 2025年5月25日)
+2025-08-14 15:18:38,797 - src.service.url_batch_service - INFO - 处理频道 bitgirlcrypto916 第 10 个视频: https://www.youtube.com/watch?v=HIJIGTZSB18
+2025-08-14 15:18:38,797 - src.service.youtube_service - INFO - 正在处理第 10 个视频: https://www.youtube.com/watch?v=HIJIGTZSB18
+2025-08-14 15:19:08,917 - src.service.youtube_service - INFO - 成功获取视频信息: 🔥🔥TRULY IMPRESSED BY BYBIT s GROWTH &GRATEFULL FOR...
+2025-08-14 15:19:08,917 - src.service.url_batch_service - INFO - 成功获取视频信息: 🔥🔥TRULY IMPRESSED BY BYBIT s GROWTH &GRATEFULL FOR...
+2025-08-14 15:19:08,941 - src.service.url_batch_service - INFO - ✓ 有效视频 #10: 🔥🔥TRULY IMPRESSED BY BYBIT s GROWTH &GRATEFULL FOR... (发布时间: 2025年5月22日)
+2025-08-14 15:19:08,941 - src.service.url_batch_service - INFO - 频道 bitgirlcrypto916 处理完成:
+2025-08-14 15:19:08,941 - src.service.url_batch_service - INFO -   总视频数: 10 个
+2025-08-14 15:19:08,941 - src.service.url_batch_service - INFO -   24小时前视频: 10 个 (计入指定数量)
+2025-08-14 15:19:08,941 - src.service.url_batch_service - INFO -   24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 15:19:08,942 - src.service.url_batch_service - INFO - 频道 bitgirlcrypto916: 获取 10 个视频 (24小时前: 10个, 24小时内: 0个)
+2025-08-14 15:19:08,944 - src.service.url_batch_service - INFO - ============================================================
+2025-08-14 15:19:08,944 - src.service.url_batch_service - INFO - URL批量处理完成！
+2025-08-14 15:19:08,945 - src.service.url_batch_service - INFO - 总耗时: 1:26:02.859131
+2025-08-14 15:19:08,945 - src.service.url_batch_service - INFO - 成功处理频道: 10/10
+2025-08-14 15:19:08,946 - src.service.url_batch_service - INFO - 总共获取视频: 100 个
+2025-08-14 15:19:08,946 - src.service.url_batch_service - INFO -   - 24小时前视频: 100 个 (计入指定数量)
+2025-08-14 15:19:08,946 - src.service.url_batch_service - INFO -   - 24小时内视频: 0 个 (不计入指定数量)
+2025-08-14 15:19:09,071 - src.service.data_service - INFO - 已保存CSV文件: c:\Users\David Wu\Desktop\web3intern\web3_intern2\youtube_crawl\data\crypto_channels_20250814_151908_videos.csv
+2025-08-14 15:19:09,081 - src.service.data_service - INFO - 已保存JSON文件: c:\Users\David Wu\Desktop\web3intern\web3_intern2\youtube_crawl\data\crypto_channels_20250814_151908_videos.json
+2025-08-14 15:19:09,082 - src.service.data_service - INFO - 成功保存 100 个视频到 2 个文件
+2025-08-14 15:19:09,082 - src.service.url_batch_service - INFO - 保存了 100 个视频信息
+2025-08-14 15:19:09,083 - src.service.url_batch_service - INFO -   - 24小时前视频: 100 个
+2025-08-14 15:19:09,083 - src.service.url_batch_service - INFO -   - 24小时内视频: 0 个
+2025-08-14 15:19:09,083 - src.service.url_batch_service - INFO - 按频道统计:
+2025-08-14 15:19:09,083 - src.service.url_batch_service - INFO -   COINMARKETHUB: 10 个视频 (24h前: 10, 24h内: 0)
+2025-08-14 15:19:09,083 - src.service.url_batch_service - INFO -   CRYPTOMASTER_786: 10 个视频 (24h前: 10, 24h内: 0)
+2025-08-14 15:19:09,084 - src.service.url_batch_service - INFO -   asma_crypto: 10 个视频 (24h前: 10, 24h内: 0)
+2025-08-14 15:19:09,084 - src.service.url_batch_service - INFO -   bitbloomcrypto: 10 个视频 (24h前: 10, 24h内: 0)
+2025-08-14 15:19:09,084 - src.service.url_batch_service - INFO -   bitgirlcrypto916: 10 个视频 (24h前: 10, 24h内: 0)
+2025-08-14 15:19:09,084 - src.service.url_batch_service - INFO -   bitzearning6535: 10 个视频 (24h前: 10, 24h内: 0)
+2025-08-14 15:19:09,085 - src.service.url_batch_service - INFO -   crypto_aditi_official: 10 个视频 (24h前: 10, 24h内: 0)
+2025-08-14 15:19:09,085 - src.service.url_batch_service - INFO -   crypto_zombie_yt: 10 个视频 (24h前: 10, 24h内: 0)
+2025-08-14 15:19:09,085 - src.service.url_batch_service - INFO -   cryptograde: 10 个视频 (24h前: 10, 24h内: 0)
+2025-08-14 15:19:09,085 - src.service.url_batch_service - INFO -   hamzatechofficial55: 10 个视频 (24h前: 10, 24h内: 0)
+2025-08-14 15:19:13,479 - src.service.browser_service - INFO - 浏览器驱动已关闭
+2025-08-14 15:19:13,480 - src.service.logging_service - INFO - ============================================================
+2025-08-14 15:19:13,480 - src.service.logging_service - INFO - YouTube爬虫服务关闭
+2025-08-14 15:19:13,480 - src.service.logging_service - INFO - ============================================================
+2025-08-14 15:19:13,480 - src.service.url_batch_service - INFO - URL批量处理服务已停止

@@ -18,6 +18,9 @@ class CryptoChannelsScraper:
     """加密货币频道批量爬虫类"""
     
     # 预定义的加密货币频道URL列表
+    # CRYPTO_CHANNELS = [
+    # "https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo"
+    # ]
     CRYPTO_CHANNELS = [
         "https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo",
         "https://youtube.com/@hamzatechofficial55?si=S5T5NXXfG8T5_ZUZ",

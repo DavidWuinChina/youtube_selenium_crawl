@@ -72,3 +72,54 @@ PAGE_LOAD_SELECTORS = [
     "h1.ytd-video-primary-info-renderer",
     "h1.ytd-watch-metadata"
 ] 
+
+# 频道“关于”页 - 简介选择器
+CHANNEL_ABOUT_BIO_SELECTORS = [
+    "yt-formatted-string#description",
+    "yt-formatted-string[slot='description']",
+    "#description-container yt-formatted-string",
+    "div#description-container",
+    "div#description"
+]
+
+# 频道订阅者数量选择器
+CHANNEL_SUBSCRIBER_COUNT_SELECTORS = [
+    "yt-formatted-string#subscriber-count",
+    "yt-formatted-string#owner-sub-count",
+    "tp-yt-paper-tooltip yt-formatted-string#subscriber-count",
+    "#subscriber-count",
+    "yt-formatted-string[aria-label*='subscriber']",
+]
+
+# 频道视频总数选择器（不同布局可能显示在标签或头部信息中）
+CHANNEL_VIDEOS_COUNT_SELECTORS = [
+    "yt-formatted-string#videos-count",
+    "div#tabsContent yt-tab-shape-wiz[tab-title*='Videos']",
+    "div#tabsContent tp-yt-paper-tab[aria-label*='Videos']",
+]
+
+# 频道页（包含首页/关于）“更多/展开”按钮选择器
+CHANNEL_ABOUT_SHOW_MORE_SELECTORS = [
+    "ytd-text-inline-expander#description #expand",
+    "#description #expand",
+    "tp-yt-paper-button#expand",
+    "ytd-button-renderer#expand",
+    "button#expand",
+]
+
+# 频道“更多信息/More info”按钮与弹窗容器
+CHANNEL_MORE_INFO_BUTTON_SELECTORS = [
+    "ytd-button-renderer a",
+    "ytd-button-renderer button",
+    "yt-button-shape button",
+    "yt-button-shape a",
+    "a",
+    "button",
+]
+
+DIALOG_CONTAINER_SELECTORS = [
+    "tp-yt-paper-dialog[opened]",
+    "tp-yt-paper-dialog",
+    "ytd-popup-container",
+    "#contentWrapper",
+]

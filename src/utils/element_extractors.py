@@ -280,3 +280,182 @@ def extract_video_links(driver, max_videos):
             continue
     
     return video_links 
+
+
+def extract_channel_about_info(driver):
+    """提取频道“关于”页面的信息：bio、订阅者、视频总数、地理位置"""
+    from selenium.webdriver.common.by import By
+    from selenium.common.exceptions import NoSuchElementException
+
+    info = {
+        "bio": "未知",
+        "subscribers": "未知",
+        "video_num": "未知",
+        "location": "未知"
+    }
+
+    # 尝试展开“更多/展开”以显示完整简介
+    try:
+        for selector in CHANNEL_ABOUT_SHOW_MORE_SELECTORS:
+            try:
+                btns = driver.find_elements(By.CSS_SELECTOR, selector)
+                for btn in btns:
+                    if btn.is_displayed():
+                        driver.execute_script("arguments[0].click();", btn)
+                        import time
+                        time.sleep(0.6)
+                        break
+            except Exception:
+                continue
+    except Exception:
+        pass
+
+    # 简介
+    for selector in CHANNEL_ABOUT_BIO_SELECTORS + [
+        "yt-attributed-string#description",
+        "yt-attributed-string[slot='description']",
+        "#description-inline-expander yt-formatted-string",
+        "#description-inline-expander yt-attributed-string",
+    ]:
+        try:
+            el = driver.find_element(By.CSS_SELECTOR, selector)
+            text = el.text.strip()
+            if text:
+                info["bio"] = text
+                break
+        except NoSuchElementException:
+            continue
+
+    # 订阅者数量
+    for selector in CHANNEL_SUBSCRIBER_COUNT_SELECTORS:
+        try:
+            el = driver.find_element(By.CSS_SELECTOR, selector)
+            text = el.text.strip()
+            if text:
+                info["subscribers"] = text
+                break
+        except NoSuchElementException:
+            continue
+
+    # 视频总数（如无法直接定位，则留给上层回填或保持未知）
+    for selector in CHANNEL_VIDEOS_COUNT_SELECTORS:
+        try:
+            els = driver.find_elements(By.CSS_SELECTOR, selector)
+            for el in els:
+                text = el.text.strip()
+                if text and any(k in text.lower() for k in ["video", "视频"]):
+                    info["video_num"] = text
+                    break
+            if info["video_num"] != "未知":
+                break
+        except Exception:
+            continue
+
+    # 地理位置（“关于”页通常有“地点”字段或类似label）
+    try:
+        candidates = driver.find_elements(By.CSS_SELECTOR, "yt-formatted-string, #details-container, #right-column, #links-container, #description-container")
+        for el in candidates:
+            txt = el.text.strip()
+            if not txt:
+                continue
+            if any(k in txt for k in ["位置", "所在地", "Location", "Based in", "Country", "地点"]):
+                # 简单提取候选行
+                lines = [line.strip() for line in txt.split('\n') if line.strip()]
+                for line in lines:
+                    if any(k in line for k in ["位置", "所在地", "Location", "Based in", "Country", "地点"]):
+                        # 取冒号或连字符后的部分
+                        parts = [p.strip() for p in line.replace("：", ":").split(":", 1)]
+                        if len(parts) == 2 and parts[1]:
+                            info["location"] = parts[1]
+                            break
+                        # 若未分隔成功，直接使用整行
+                        info["location"] = line
+                        break
+                if info["location"] != "未知":
+                    break
+    except Exception:
+        pass
+
+    # “更多信息/More info”中提取订阅数、视频数、位置（如存在）
+    try:
+        # 优先查找明显的标签-值结构
+        label_value_containers = driver.find_elements(By.CSS_SELECTOR, "#details-container, #right-column, ytd-channel-about-metadata-renderer")
+        for container in label_value_containers:
+            text = container.text
+            if not text:
+                continue
+            lines = [l.strip() for l in text.split('\n') if l.strip()]
+            for i, line in enumerate(lines):
+                lower = line.lower()
+                # 订阅者
+                if any(k in lower for k in ["subscribers", "订阅者", "粉丝"]):
+                    # value 可能在同一行或下一行
+                    val = line
+                    if i + 1 < len(lines) and not any(k in lines[i+1].lower() for k in ["subscribers", "订阅者", "粉丝", "videos", "视频"]):
+                        val = lines[i+1]
+                    info["subscribers"] = val
+                # 视频总数
+                if any(k in lower for k in ["videos", "视频"]):
+                    val = line
+                    if i + 1 < len(lines) and not any(k in lines[i+1].lower() for k in ["subscribers", "订阅者", "粉丝", "videos", "视频"]):
+                        val = lines[i+1]
+                    info["video_num"] = val
+                # 位置
+                if any(k in lower for k in ["location", "country", "地区", "位置", "所在地"]):
+                    parts = [p.strip() for p in line.replace("：", ":").split(":", 1)]
+                    if len(parts) == 2 and parts[1]:
+                        info["location"] = parts[1]
+                    elif i + 1 < len(lines):
+                        info["location"] = lines[i+1]
+    except Exception:
+        pass
+
+    # 若仍有字段为“未知”，尝试从页面源码回退解析
+    if any(info[k] == "未知" for k in ["bio", "subscribers", "video_num", "location"]):
+        try:
+            from .text_parsers import parse_channel_about_from_page_source
+            page_source = driver.page_source
+            fallback = parse_channel_about_from_page_source(page_source)
+            for k in ["bio", "subscribers", "video_num", "location"]:
+                if info[k] == "未知" and fallback.get(k):
+                    info[k] = fallback[k]
+        except Exception:
+            pass
+
+    return info
+
+
+def extract_channel_subscribers_from_page(driver):
+    """在当前频道页（首页或Videos页）提取订阅者数量，失败回退到源码解析"""
+    from selenium.webdriver.common.by import By
+    from selenium.common.exceptions import NoSuchElementException
+
+    # 直接通过常见选择器读取
+    for selector in [
+        "yt-formatted-string#owner-sub-count",
+        "yt-formatted-string#subscriber-count",
+        "#subscriber-count",
+        "yt-formatted-string[aria-label*='subscriber']",
+        "yt-formatted-string[aria-label*='订阅']",
+    ]:
+        try:
+            el = driver.find_element(By.CSS_SELECTOR, selector)
+            text = el.text.strip()
+            if text:
+                return text
+        except NoSuchElementException:
+            continue
+        except Exception:
+            continue
+
+    # 解析页面源码
+    try:
+        from .text_parsers import parse_channel_about_from_page_source, normalize_subscriber_text
+        page_source = driver.page_source
+        parsed = parse_channel_about_from_page_source(page_source)
+        if parsed.get("subscribers"):
+            return normalize_subscriber_text(parsed["subscribers"])
+    except Exception:
+        pass
+
+    return "未知"

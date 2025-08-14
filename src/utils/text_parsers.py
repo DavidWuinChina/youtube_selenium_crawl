@@ -265,3 +265,107 @@ def is_video_older_than_24_hours(upload_date):
     except Exception as e:
         print(f"判断视频时间时出错: {str(e)}")
         return True  # 出错时默认认为是老视频 
+
+
+def normalize_subscriber_text(raw_text: str) -> str:
+    """标准化订阅者文本，去掉“位订阅者/subscribers”等标签，仅保留数值及单位（如 万/K/M）"""
+    try:
+        if not raw_text:
+            return ""
+        text = raw_text.strip()
+        # 统一空白
+        text = re.sub(r"\s+", " ", text)
+        # 去除常见标签（大小写不敏感）
+        label_patterns = [
+            r"(?i)\bsubscribers?\b",
+            r"位?订阅者",
+            r"訂閱者",
+            r"粉丝",
+        ]
+        for p in label_patterns:
+            text = re.sub(p, "", text).strip()
+
+        # 优先匹配中文单位 万/亿
+        m = re.search(r"([0-9]+(?:\.[0-9]+)?)(万|亿)", text)
+        if m:
+            return f"{m.group(1)}{m.group(2)}"
+
+        # 其次匹配带K/M/B单位
+        m = re.search(r"([0-9]+(?:\.[0-9]+)?)([KMBkmb])", text)
+        if m:
+            return f"{m.group(1)}{m.group(2).upper()}"
+
+        # 再尝试千位分隔数字 12,345
+        m = re.search(r"([0-9]{1,3}(?:,[0-9]{3})+)", text)
+        if m:
+            return m.group(1)
+
+        # 普通纯数字
+        m = re.search(r"([0-9]+(?:\.[0-9]+)?)", text)
+        if m:
+            return m.group(1)
+
+        return text
+    except Exception:
+        return raw_text.strip() if raw_text else ""
+
+
+def _extract_simple_or_runs_text(block: str) -> str:
+    """从 JSON 片段中提取 simpleText 或 runs 文本合并"""
+    try:
+        # simpleText
+        m = re.search(r'"simpleText"\s*:\s*"([^"]+)"', block)
+        if m:
+            return m.group(1)
+        # runs 数组拼接
+        runs = re.findall(r'"text"\s*:\s*"([^"]+)"', block)
+        if runs:
+            return ''.join(runs)
+    except Exception:
+        pass
+    return ""
+
+
+def parse_channel_about_from_page_source(page_source: str) -> dict:
+    """从页面源码解析频道关于信息（bio/subscribers/video_num/country）"""
+    result = {
+        "bio": None,
+        "subscribers": None,
+        "video_num": None,
+        "location": None,
+    }
+    try:
+        # description（频道简介）
+        desc_match = re.search(r'"(description)"\s*:\s*"([\s\S]*?)"', page_source)
+        if desc_match:
+            # 直接抓到的 description 可能是频道元数据
+            description = desc_match.group(2)
+            # 反转义常见序列
+            description = description.replace('\\n', '\n').replace('\\"', '"')
+            if len(description.strip()) > 0:
+                result["bio"] = description.strip()
+
+        # subscribers（订阅数）
+        sub_block = re.search(r'"subscriberCountText"\s*:\s*\{([\s\S]*?)\}', page_source)
+        if sub_block:
+            text = _extract_simple_or_runs_text(sub_block.group(0))
+            if text:
+                result["subscribers"] = text
+
+        # video count（视频总数，可能是 videoCountText / videosCountText）
+        vid_block = re.search(r'"videoCountText"\s*:\s*\{([\s\S]*?)\}|"videosCountText"\s*:\s*\{([\s\S]*?)\}', page_source)
+        if vid_block:
+            text = _extract_simple_or_runs_text(vid_block.group(0))
+            if text:
+                result["video_num"] = text
+
+        # country/location（国家/地区）
+        country_match = re.search(r'"country"\s*:\s*"([^"]+)"', page_source)
+        if country_match:
+            result["location"] = country_match.group(1)
+
+    except Exception:
+        # 忽略解析错误
+        pass
+
+    return result

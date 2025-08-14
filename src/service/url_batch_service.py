@@ -14,7 +14,7 @@ from .youtube_service import YouTubeService
 from .browser_service import BrowserService
 from .data_service import DataService
 from .logging_service import LoggingService
-from ..utils.element_extractors import extract_video_links
+from ..utils.element_extractors import extract_video_links, extract_channel_about_info, extract_channel_subscribers_from_page
 from ..utils.text_parsers import is_video_older_than_24_hours
 from ..config.settings import SCRAPER_CONFIG
 
@@ -122,6 +122,21 @@ class URLBatchService:
             self.logger.warning(f"URL转换失败，使用原始URL: {str(e)}")
             return url
     
+    def _build_about_url(self, url: str) -> str:
+        """根据频道URL构建关于(about)页面URL，尽量保留原始参数结构"""
+        try:
+            if '?' in url:
+                base_url, params = url.split('?', 1)
+                base_url = base_url.rstrip('/')
+                # 确保是频道主页样式
+                if '@' in base_url:
+                    return f"{base_url}/about?{params}"
+                return f"{base_url}/about?{params}"
+            base_url = url.rstrip('/')
+            return f"{base_url}/about"
+        except Exception:
+            return url
+
     def process_channel_url(self, channel_url: str, max_videos: int = 20) -> List[Dict]:
         """
         处理单个频道URL
@@ -140,6 +155,13 @@ class URLBatchService:
         self.logger.info(f"开始处理频道: {channel_name} - {channel_url}")
         
         try:
+            # 先访问频道关于页，提取频道信息
+            about_url = self._build_about_url(channel_url)
+            self.logger.info(f"访问频道关于页: {about_url}")
+            self.driver.get(about_url)
+            time.sleep(SCRAPER_CONFIG["page_load_delay"])
+            channel_about_info = extract_channel_about_info(self.driver)
+
             # 智能处理URL：保留参数但确保能找到视频
             videos_url = self._smart_convert_to_videos_url(channel_url)
             self.logger.info(f"访问频道页面: {videos_url}")
@@ -170,6 +192,26 @@ class URLBatchService:
                     video_info['source_channel'] = channel_name
                     video_info['source_url'] = channel_url
                     video_info['scrape_timestamp'] = datetime.now().isoformat()
+
+                    # 合并频道关于信息
+                    try:
+                        from ..utils.text_parsers import normalize_subscriber_text
+                        subscribers_value = channel_about_info.get('subscribers') or "未知"
+                        if subscribers_value == "未知":
+                            # 尝试在当前频道页(含Videos页)再次抓取订阅数
+                            subscribers_value = extract_channel_subscribers_from_page(self.driver)
+                        subscribers_value = normalize_subscriber_text(subscribers_value) or "未知"
+
+                        video_info.update({
+                            'bio': channel_about_info.get('bio', '未知'),
+                            'subscribers': subscribers_value,
+                            'location': channel_about_info.get('location', '未知'),
+                        })
+                        # 用户反馈不需要视频总数
+                        if 'video_num' in video_info:
+                            del video_info['video_num']
+                    except Exception:
+                        pass
                     
                     # 判断视频是否超过24小时
                     upload_date = video_info.get('date', '未知')
