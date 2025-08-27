@@ -22,16 +22,35 @@ class CryptoChannelsScraper:
     # "https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo"
     # ]
     CRYPTO_CHANNELS = [
-        "https://youtube.com/@COINMARKETHUB?si=WjLsW0RahAyaE6Wo",
-        "https://youtube.com/@hamzatechofficial55?si=S5T5NXXfG8T5_ZUZ",
-        "https://youtube.com/@cryptograde?si=d_GHk4WzwcHuy51k",
-        "https://youtube.com/@asma_crypto",
-        "https://youtube.com/@CRYPTOMASTER_786",
-        "https://youtube.com/@crypto_aditi_official",
-        "https://youtube.com/@bitzearning6535?si=fLEjp6CJyQN4000M",
-        "https://youtube.com/@bitbloomcrypto",
-        "https://youtube.com/@crypto_zombie_yt?si=NVTHWAQt5HU-sQWa",
-        "https://youtube.com/@bitgirlcrypto916?si=wKqaBspqap0N577-"
+    "https://www.youtube.com/@drcrypto2/videos",
+    "https://youtube.com/@bitgirlcrypto916?si=wKqaBspqap0N577-",
+    "https://youtube.com/@CryptoQueen_Group",
+    "https://youtube.com/@cryptoboyyt1?si=SezIOoaHRyGufs4X",
+    "https://youtube.com/@nftstar786?si=58AUMrAfqidcmjH4",
+    "https://youtube.com/c/cryptosonic1",
+    "https://youtube.com/@thecryptokayal",
+    "https://youtube.com/@websitepromotions-e8l?si=4L2BbWmuWC7t-AnN",
+    "https://www.youtube.com/@tarikcrypto",
+    "https://youtube.com/@indep15?si=VWRKTwhVgdxD3L5h",
+    "https://youtube.com/channel/UCPwGHCRkJ_rl39vdXw1TeyQ",
+    "https://www.youtube.com/@Cryptohouse68/videos",
+    "https://www.youtube.com/@Caracryptovn/videos",
+    "https://www.youtube.com/@GF_capital/videos",
+    "https://youtube.com/@VuongChiHungFinance",
+    "https://www.youtube.com/@dautukiemtienvn",
+    "https://www.youtube.com/@danchoitienao",
+    "https://www.youtube.com/@CCAChannels",
+    "https://www.youtube.com/@thuhoaimmo",
+    "https://www.youtube.com/@DNTSTUDIOTM",
+    "https://www.youtube.com/@thuhoaimmo",
+    "https://www.youtube.com/@CryptoVNChannel/videos",
+    "https://www.youtube.com/@Queenmeme01",
+    "https://www.youtube.com/@ValueCapital86",
+    "https://www.youtube.com/@OASISNFT",
+    "https://youtube.com/@cryptoworld777?si=mEQuP1IbouKdVr93",
+    "https://www.youtube.com/@CryptoHalloween",
+    "https://www.youtube.com/@crypto-venom",
+    "https://www.youtube.com/@crypto-mario"
     ]
     
     def __init__(self, headless: bool = False):
